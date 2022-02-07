@@ -1,10 +1,10 @@
-# Getting Started with Create React App
+# Online menu
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is meant to learn new oportunities by programming mainly with React lib.
 
-## Available Scripts
+## Proposal
 
-In the project directory, you can run:
+Build a online menu, such as one that could sell small snacks, drinks and desserts.
 
 ### `npm start`
 
