@@ -1,0 +1,517 @@
+.checkout-desktop-background {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px 50px 180px 50px;
+    background-color: #f5f5f5;
+    height: 100vh;
+}
+.checkout-desktop-header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+    margin: 5px 0 40px 0;
+}
+.checkout-desktop-header-title {
+    font-size: 25px;
+    font-weight: lighter;
+}
+.checkout-desktop-header-stepper {
+
+}
+.checkout-desktop-table {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+    width: 100%;
+}
+.checkout-desktop-table-header {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 10px;
+}
+.checkout-desktop-table-header-title {
+    width: 20%;
+    text-align: center;
+    font-size: 14px;
+}
+.checkout-desktop-table-header-title:nth-child(1) {
+    width: 40%;
+    text-align: left;
+}
+.checkout-desktop-table-header-title:nth-child(2) {
+
+}
+.checkout-desktop-table-header-title:nth-child(3) {
+
+}
+.checkout-desktop-table-header-title:nth-child(4) {
+
+}
+.checkout-desktop-table-cards-list {
+    width: 100%;
+    margin: 20px 0 0 0;
+}
+.checkout-desktop-table-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px -10px #888;
+    margin: 0 0 10px 0;
+    padding: 15px;
+    position: relative;
+}
+.checkout-desktop-table-card-product {
+    width: 40%;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.checkout-desktop-table-card-product-image {
+    display: flex;
+}
+.checkout-desktop-table-card-product-image img {
+    width: 65px;
+    border-radius: 10px;
+    height: 65px;
+}
+.checkout-desktop-table-card-product-title {
+    margin: 0 0 0 15px;
+    font-weight: 600;
+    font-size: 18px;
+}
+.checkout-desktop-table-card-product-unity-price {
+    width: 20%;
+    text-align: center;
+    font-size: 18px;
+}
+.checkout-desktop-table-card-quantity {
+    width: 20%;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.checkout-desktop-table-card-quantity-minus {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.checkout-desktop-table-card-quantity-minus .material-icons{
+    color: tomato;
+}
+.checkout-desktop-table-card-quantity-minus .material-icons:hover{
+    cursor: pointer;
+}
+.checkout-desktop-table-card-quantity-description {
+
+}
+.checkout-desktop-table-card-quantity-plus {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.checkout-desktop-table-card-quantity-plus .material-icons{
+    color: tomato;
+}
+.checkout-desktop-table-card-quantity-plus .material-icons{
+    cursor: pointer;
+}
+.checkout-desktop-table-card-total-price {
+    width: 20%;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+}
+.checkout-desktop-table-card-delete-button {
+	position: absolute;
+	right: -10px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	background-color: #f5f5f5;
+	border-radius: 20px;
+	padding: 3px;
+	border: 1px solid white;
+}
+.checkout-desktop-table-card-delete-button {
+    cursor: pointer;
+}
+.checkout-desktop-table-card-delete-button .material-icons{
+    font-size: 18px;
+}
+.checkout-desktop-empty-cart a{
+    text-decoration: unset;
+}
+.checkout-desktop-empty-cart-image {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.checkout-desktop-empty-cart-image .material-icons{
+    font-size: 90px;
+}
+.checkout-desktop-empty-cart-text {
+    margin: 20px 0 60px 0;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 400;
+}
+.checkout-desktop-empty-cart-button {
+    background-color: tomato;
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    width: 200px;
+}
+.checkout-desktop-table-card-quantity-description .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input{
+    width: 10px;
+    height: 0px;
+    text-align: center;
+    font-size: 15px;
+}
+.checkout-desktop-table-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 20px 0 0 0;
+}
+.checkout-desktop-table-footer-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.checkout-desktop-table-footer-button:hover {
+    cursor: pointer;
+}
+.checkout-desktop-table-footer-button-icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.checkout-desktop-table-footer-button-text {
+
+}
+.checkout-desktop-table-footer-info {
+    font-size: 19px;
+    font-weight: 600;
+}
+.checkout-desktop-buttons-container {
+    margin: 60px 0 0 0;
+}
+.checkout-desktop-buttons-container a {
+    text-decoration: unset;
+}
+.checkout-desktop-button-foward {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: tomato;
+    padding: 10px;
+    border-radius: 10px;
+    width: 200px;
+}
+.checkout-desktop-empty-cart-button:hover, .checkout-desktop-button-foward:hover, .checkout-desktop-button-back:hover{
+    cursor: pointer;
+}
+.checkout-desktop-button-foward-text {
+    color: white;
+    flex: 1;
+    text-align: center;
+}
+.checkout-desktop-button-foward-icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 0 -2px 0;
+}
+.checkout-desktop-button-foward-icon .material-icons{
+    color: white;
+}
+.checkout-desktop-button-back {
+    color: tomato;
+    margin: 20px 0 0 0;
+    font-size: 15px;
+    text-align: center;
+}
+.checkout-desktop-step-two {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.checkout-desktop-step-two-textfield {
+    width: 100%;
+    margin: 0 0 25px 0;
+}
+.checkout-desktop-step-two-textfield .css-1u3bzj6-MuiFormControl-root-MuiTextField-root{
+    width: 100%;
+}
+.checkout-desktop-step-two-textfield .css-dpjnhs-MuiInputBase-root-MuiOutlinedInput-root{
+    height: 250px;
+    background-color: white;
+}
+.checkout-desktop-step-three {
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px 0px #888888;
+    width: 80%;
+}
+.checkout-desktop-step-three-header {
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.checkout-desktop-step-three-header-price {
+    font-weight: 600;
+    font-size: 30px;
+}
+.checkout-desktop-step-three-header-title {
+    border-radius: 30px;
+    background-color: white;
+    padding: 15px;
+    color: red;
+    font-weight: 700;
+    line-height: 1;
+}
+.checkout-desktop-step-three-options {
+    background-color: white;
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+.checkout-desktop-step-three-option-box {
+    width: 30%;
+}
+.checkout-desktop-step-three-option-box:hover{
+    cursor: pointer;
+}
+.checkout-desktop-step-three-option-box-radio {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0 0 0 30px;
+}
+.checkout-desktop-step-three-option-box-radio .css-vqmohf-MuiButtonBase-root-MuiRadio-root.Mui-checked{
+    color: red;
+}
+.checkout-desktop-step-three-option-box-radio-text {
+    font-weight: 700;
+}
+.checkout-desktop-step-three-option-box-info {
+
+}
+.checkout-desktop-step-three-option-box-info-text {
+    margin: 0 0 10px 0;
+}
+.checkout-desktop-step-three-option-box-info-details {
+    font-size: 13px;
+    font-weight: 500;
+}
+.checkout-desktop-step-three-buttons{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+.checkout-desktop-step-four {
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px 0px #888888;
+    width: 80%;
+}
+.checkout-desktop-step-four-header {
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.checkout-desktop-step-four-header-price {
+    font-weight: 600;
+    font-size: 30px;
+}
+.checkout-desktop-step-four-header-title {
+    border-radius: 30px;
+    background-color: white;
+    padding: 15px;
+    color: red;
+    font-weight: 700;
+    line-height: 1;
+}
+.checkout-desktop-step-four-options {
+    background-color: white;
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+.checkout-desktop-step-four-options .css-vqmohf-MuiButtonBase-root-MuiRadio-root.Mui-checked {
+    color: red
+}
+.checkout-desktop-step-four-option-box-left {
+    width: 40%;
+}
+.checkout-desktop-step-four-option-box-left:hover{
+    cursor: pointer;
+}
+.checkout-desktop-step-four-option-box-left-title {
+    text-transform: uppercase;
+    color: gray;
+    font-weight: 600;
+    margin: 0 0 10px 0;
+}
+.checkout-desktop-step-four-option-box-left-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.checkout-desktop-step-four-option-box-left-button-text {
+    font-weight: 700;
+}
+.checkout-desktop-step-four-option-box-left-image {
+
+}
+.checkout-desktop-step-four-option-box-left-image img{
+    width: 100%;
+}
+.checkout-desktop-step-four-option-box-right {
+    width: 30%;
+}
+.checkout-desktop-step-four-option-box-right-title {
+    text-transform: uppercase;
+    color: gray;
+    font-weight: 600;
+    margin: 0 0 10px 0;
+}
+.checkout-desktop-step-four-option-box-right-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0 0 15px 0;
+}
+.checkout-desktop-step-four-option-box-right-button-text {
+    font-weight: 700;
+}
+.checkout-desktop-step-four-option-box-left-button:hover,
+.checkout-desktop-step-four-option-box-right-button:hover {
+    cursor: pointer;
+}
+.checkout-desktop-step-four-buttons{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+.checkout-desktop-step-five {
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px 0px #888888;
+    width: 80%;
+}
+.checkout-desktop-step-five-header {
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.checkout-desktop-step-five-header-price {
+    font-weight: 600;
+    font-size: 30px;
+}
+.checkout-desktop-step-five-header-title {
+    border-radius: 30px;
+    background-color: white;
+    padding: 15px;
+    color: red;
+    font-weight: 700;
+    line-height: 1;
+}
+.checkout-desktop-step-five-itens-summary{
+    background-color: white;
+    padding: 30px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.checkout-desktop-step-five-itens-container {
+    width: 50%;
+    padding: 0 30px;
+}
+.checkout-desktop-step-five-itens-title {
+    font-weight: 600;
+    margin: 0 0 15px 0;
+}
+.checkout-desktop-step-five-itens-details {
+
+}
+.checkout-desktop-step-five-item-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+.checkout-desktop-step-five-item-photo {
+
+}
+.checkout-desktop-step-five-item-photo img{
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+}
+.checkout-desktop-step-five-item-amount {
+
+}
+.checkout-desktop-step-five-item-text {
+
+}
+.checkout-desktop-step-five-item-price {
+
+}
+.checkout-desktop-step-five-itens-final-value {
+    font-size: 23px;
+    font-weight: 400;
+    text-align: right;
+}
+.checkout-desktop-step-five-buttons{
+
+}

@@ -1,0 +1,294 @@
+{
+    "products": [
+        {
+            "title": "Chá erva doce",
+            "category": "Drinks",
+            "price": 4.0,
+            "code": 32,
+            "description": "Chá de erva doce com toque de limão sem açucar.",
+            "image": "drinks_cha_erva_doce",
+            "is_highlight": false,
+            "is_available": false
+        },
+        {
+            "title": "Suco morango",
+            "category": "Drinks",
+            "price": 6.0,
+            "code": 27,
+            "description": "Suco natural de morango sem açucar.",
+            "image": "drinks_suco_morango",
+            "is_highlight": false,
+            "is_available": true
+        },
+        {
+            "title": "Suco tangerina",
+            "category": "Drinks",
+            "price": 6.0,
+            "code": 29,
+            "description": "Suco natural de tangerina sem açucar.",
+            "image": "drinks_suco_tangerina",
+            "is_highlight": false,
+            "is_available": false
+        },
+        {
+            "title": "Vitamina amora",
+            "category": "Drinks",
+            "price": 7.0,
+            "code": 31,
+            "description": "Leite batido com amora e mel de laranjeira.",
+            "image": "drinks_vitamina_amora",
+            "is_highlight": false,
+            "is_available": true
+        },
+        {
+            "title": "Vitamina morango",
+            "category": "Drinks",
+            "price": 7.0,
+            "code": 28,
+            "description": "Leite batido com morango e mel de laranjeira.",
+            "image": "",
+            "is_highlight": false,
+            "is_available": true
+        },
+        {
+            "title": "Chá de hibisco",
+            "category": "Drinks",
+            "price": 6.0,
+            "code": 30,
+            "description": "Chá de hibisco com toque de laranja sem açucar.",
+            "image": "drinks_cha_de_hibisco",
+            "is_highlight": true,
+            "is_available": false
+        },
+        {
+            "title": "Espresso especial",
+            "category": "Coffee",
+            "price": 3.5,
+            "code": 3,
+            "description": "Café italiano espresso sem açucar.",
+            "image": "coffee_espresso_especial",
+            "is_highlight": false,
+            "is_available": true
+        },
+        {
+            "title": "Espresso com leite",
+            "category": "Coffee",
+            "price": 5.5,
+            "code": 2,
+            "description": "Café espresso com leite vaporizado.",
+            "image": "coffee_espresso_com_leite",
+            "is_highlight": false,
+            "is_available": true
+        },
+        {
+            "title": "Cappuccino curto",
+            "category": "Coffee",
+            "price": 6.0,
+            "code": 5,
+            "description": "Café espresso, leite vaporizado, chocolate em pó, canela e xarope de avelã.",
+            "image": "coffee_cappuccino_curto",
+            "is_highlight": true,
+            "is_available": false
+        },
+        {
+            "title": "Café mocha",
+            "category": "Coffee",
+            "price": 10.0,
+            "code": 7,
+            "description": "Café espresso, calda de chocolate, leite vaporizado e chantilly.",
+            "image": "coffee_cafe_mocha",
+            "is_highlight": false,
+            "is_available": false
+        },
+        {
+            "title": "Cappuccino chocoo",
+            "category": "Drinks",
+            "price": 8.0,
+            "code": 8,
+            "description": "Café espresso, leite vaporizado, calda de chocolate, canela e xarope de avelã.",
+            "image": "coffee_cappuccino_chocoo",
+            "is_highlight": true,
+            "is_available": true
+        },
+        {
+            "title": "Prensa françesa",
+            "category": "Coffee",
+            "price": 5.5,
+            "code": 78,
+            "description": "O preparo com uma prensa francesa, preserva os preciosos óleos naturais do café que o filtro de papel absorve, e extrai o sabor do café por inteiro, proporcionando ainda uma consistência mais densa e rica.",
+            "image": "coffee_prensa_francesa",
+            "is_highlight": false,
+            "is_available": true
+        },
+        {
+            "title": "Baunilha latyte",
+            "category": "Coffee",
+            "price": 10.0,
+            "code": 6,
+            "description": "Leite, chocolate em pó, baunilha, chantilly.",
+            "image": "coffee_baunilha_latyte",
+            "is_highlight": false,
+            "is_available": false
+        },
+        {
+            "title": "Caramelo macchiato",
+            "category": "Coffee",
+            "price": 7.0,
+            "code": 9,
+            "description": "Café espresso, leite vaporizado, caramelo e baunilha.",
+            "image": "coffee_caramelo_macchiato",
+            "is_highlight": true,
+            "is_available": true
+        },
+        {
+            "title": "Cappuccino Iced",
+            "category": "Coffee",
+            "price": 10.0,
+            "code": 10,
+            "description": "Café espresso batido com gelo, leite e calda de chocolate.",
+            "image": "coffee_cappuccino_iced",
+            "is_highlight": false,
+            "is_available": true
+        },
+        {
+            "title": "Francês",
+            "category": "Snacks",
+            "price": 8.0,
+            "code": 16,
+            "description": "Pão francês gratinado com mussarela e queijo prato. Servido com molho agridoce de pimenta com goiaba.",
+            "image": "snacks_frances",
+            "is_highlight": false,
+            "is_available": false
+        },
+        {
+            "title": "Italiano",
+            "category": "Snacks",
+            "price": 13.0,
+            "code": 14,
+            "description": "Pão ciabatta com peperoni, rúcula, pimenta, cebola roxa e queijo gouda.",
+            "image": "snacks_italiano",
+            "is_highlight": false,
+            "is_available": false
+        },
+        {
+            "title": "Pão de queijo",
+            "category": "Snacks",
+            "price": 9.0,
+            "code": 10,
+            "description": "Pão de queijo recheado com alface, queijo, ovo frito, bacon crocante e tomate.",
+            "image": "snacks_pao_de_queijo",
+            "is_highlight": false,
+            "is_available": true
+        },
+        {
+            "title": "Vegano",
+            "category": "Snacks",
+            "price": 9.0,
+            "code": 15,
+            "description": "Pão 12 grãos, alface, tomate, rúcula e cebola roxa.",
+            "image": "snacks_vegano",
+            "is_highlight": false,
+            "is_available": true
+        },
+        {
+            "title": "Torta alemã branca",
+            "category": "Dessert",
+            "price": 70.0,
+            "code": 20,
+            "description": "Torta alemã de chocolate branco. Acompanha chantilly, cereja e chocolate polvilhado.",
+            "image": "desserts_torta_alema_branca",
+            "is_highlight": false,
+            "is_available": true
+        },
+        {
+            "title": "Torta trufada (promo)",
+            "category": "Dessert",
+            "price": 65.0,
+            "code": 19,
+            "description": "Torta de cereja e chocolate belga trufada.",
+            "image": "desserts_torta_trufada",
+            "is_highlight": false,
+            "is_available": true
+        },
+        {
+            "title": "Pavê belga",
+            "category": "Dessert",
+            "price": 40.0,
+            "code": 25,
+            "description": "Pavê de chocolate belga com morango.",
+            "image": "desserts_pave_belga",
+            "is_highlight": false,
+            "is_available": true
+        },
+        {
+            "title": "Sorvete caramelo",
+            "category": "Dessert",
+            "price": 14.5,
+            "code": 21,
+            "description": "Sorvete de caramelo com cobertura de chocolate belga e frutas vermelhas.",
+            "image": "desserts_sorvete_caramelo",
+            "is_highlight": false,
+            "is_available": true
+        },
+        {
+            "title": "Panqueca com framboesa",
+            "category": "Dessert",
+            "price": 35.0,
+            "code": 22,
+            "description": "Panquecas americanas com framboesa polvilhadas com açucar de confeiteiro.",
+            "image": "desserts_panqueca_framboesa",
+            "is_highlight": false,
+            "is_available": false
+        },
+        {
+            "title": "Iogurte com paçoca",
+            "category": "Dessert",
+            "price": 12.0,
+            "code": 26,
+            "description": "Iogurte natural com morango e paçoca em pedaços.",
+            "image": "desserts_iogurte_com_pacoca",
+            "is_highlight": false,
+            "is_available": true
+        },
+        {
+            "title": "Iogurte grego cereja",
+            "category": "Dessert",
+            "price": 8.0,
+            "code": 24,
+            "description": "Iogurte grego com granola e calda de cereja.",
+            "image": "desserts_iogurte_grego_cereja",
+            "is_highlight": false,
+            "is_available": true
+        },
+        {
+            "title": "Cupcake belga",
+            "category": "Dessert",
+            "price": 18.0,
+            "code": 789,
+            "description": "Cupcake de chocolate belga com chantilly de chocolate e cubinhos de brownie de chocolate.",
+            "image": "desserts_cupcake_belga",
+            "is_highlight": false,
+            "is_available": false
+        },
+        {
+            "title": "Copinho belga",
+            "category": "Dessert",
+            "price": 5.0,
+            "code": 23,
+            "description": "Chocolate meio amargo belga recheado com chocolate ao leite com avelã.",
+            "image": "desserts_copinho_belga",
+            "is_highlight": false,
+            "is_available": true
+        },
+        {
+            "title": "Cookies chocolate",
+            "category": "Dessert",
+            "price": 4.0,
+            "code": 18,
+            "description": "Cookies de baunilha com gotas de chocolate belga meio amargo.",
+            "image": "desserts_cookies",
+            "is_highlight": false,
+            "is_available": true
+        }
+    ]
+}

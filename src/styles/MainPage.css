@@ -1,0 +1,92 @@
+.main-page-desktop-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px 50px;
+}
+.main-page-desktop-aside-menu {
+    width: 15%;
+    margin: 0 30px 0 0;
+}
+.main-page-desktop-aside-menu-box {
+    margin: 0 0 20px 0;
+}
+.main-page-desktop-aside-menu-box-title {
+    font-size: 22px;
+    font-weight: bold;
+}
+.main-page-desktop-aside-menu-box-option-list {
+
+}
+.main-page-desktop-aside-menu-box-option {
+    display: flex;
+    align-items: flex-start;
+    margin: 10px 0;
+}
+.main-page-desktop-aside-menu-box-option:hover{
+    cursor: pointer;
+}
+.main-page-desktop-aside-menu-box-option-icon {
+    display: flex;
+    margin: 0 5px 0 0;
+}
+.main-page-desktop-aside-menu-box-option-icon .material-icons{
+    font-size: 22px;
+}
+.main-page-desktop-aside-menu-box-option-text {
+    font-size: 15px;
+}
+.main-page-desktop-aside-menu-contact {
+    margin: 30px 0 0 0;
+    border-top: 1px solid #eaeaea;
+}
+.main-page-desktop-aside-menu-contact-item {
+    display: flex;
+    align-items: flex-start;
+    margin: 20px 0;
+}
+.main-page-desktop-aside-menu-contact-item-icon {
+    display: flex;
+    margin: 0 10px 0 0;
+}
+.main-page-desktop-aside-menu-contact-item-icon .material-icons{
+
+}
+.main-page-desktop-aside-menu-contact-item-text {
+    font-size: 15px;
+}
+.main-page-desktop-content {
+    width: 70%;
+}
+.main-page-desktop-content-title {
+    color: #ff4e4e;
+    font-size: 19px;
+    font-weight: bold;
+    margin: 0 0 30px 0;
+}
+.main-page-desktop-content-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+.main-page-desktop-content-list .product-item-desktop-grid-container{
+    width: calc(85% / 3);
+    margin: 0 30px 30px 0;
+    border-radius: 10px;
+    text-decoration: none;
+    color: unset;
+}
+.main-page-desktop-content-list .product-item-desktop-list-container{
+    width: 80%;
+    margin: 0 0px 30px 0;
+    border-radius: 10px;
+    display: flex;
+}
+.main-page-desktop-content-list .product-item-desktop-grid-container a, .main-page-desktop-content-list .product-item-desktop-list-container a {
+    text-decoration: none;
+    color: unset;
+}
+.main-page-desktop-content-list a:nth-child(3n){
+    margin-right: 0;
+}
+
