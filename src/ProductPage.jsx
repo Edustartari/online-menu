@@ -45,21 +45,21 @@ export default class ProductPage extends Component {
                             <img src={cards} alt="" />
                         </div>
                         <div className="product-desktop-payment-market">
-                            <div className="product-desktop-payment-market-text">Processado por</div>
+                            <div className="product-desktop-payment-market-text">Processed by</div>
                             <img src={paid_market} alt="" />
                         </div>
                     </div>
                     <div className="product-desktop-description">{product.description}</div>
                     <div className="product-desktop-buttons">
                         <div className="product-desktop-add-button" onClick={(event) => {this.props.add_product(product); event.stopPropagation()}}>
-                            <div className="product-desktop-add-button-text">Adicionar item</div>
+                            <div className="product-desktop-add-button-text">Add item</div>
                             <div className="product-desktop-add-button-icon">
                                 <span className="material-icons">add</span>
                             </div>
                         </div>
                         <div className="product-desktop-whatsapp-button">
                             <img src={whatsapp_icon} alt="" />
-                            <div className="product-desktop-whatsapp-button-text">Pedir por Whatsapp</div>
+                            <div className="product-desktop-whatsapp-button-text">Order by Whatsapp</div>
                         </div>
                     </div>
                 </div>

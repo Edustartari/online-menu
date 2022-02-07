@@ -40,7 +40,7 @@ export default class Header extends Component {
                         <div className="header-desktop-home-search-input"></div>
                     </div>
                     <Link to="/" onClick={() => this.props.handle_change('url', pathname)}>
-                        <div className="header-desktop-home-title">Café Edu</div>
+                        <div className="header-desktop-home-title">Edu's Coffee</div>
                     </Link>
                     <Link to="/login" onClick={() => this.props.handle_change('url', pathname)}>
                         <div className="header-desktop-home-profile">
@@ -60,11 +60,11 @@ export default class Header extends Component {
                             <div className="header-desktop-login-button-icon">
                                 <span className="material-icons">arrow_back_ios</span>
                             </div>
-                            <div className="header-desktop-login-button-text">Continuar Comprando</div>
+                            <div className="header-desktop-login-button-text">Keep buying</div>
                         </div>
                     </Link>
                     <Link to="/" onClick={() => this.props.handle_change('url', pathname)}>
-                        <div className="header-desktop-home-title">Café Edu</div>
+                        <div className="header-desktop-home-title">Edu's Coffee</div>
                     </Link>
                     <Link to="/login" onClick={() => this.props.handle_change('url', pathname)}>
                         <div className="header-desktop-home-profile">

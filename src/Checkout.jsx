@@ -197,9 +197,9 @@ export default class Checkout extends Component {
                         <div className="checkout-desktop-table">
                             <div className="checkout-desktop-table-header">
                                 <div className="checkout-desktop-table-header-title">Your {total_units === 1 ? total_units + ' item' : total_units + ' itens'}</div>
-                                <div className="checkout-desktop-table-header-title">Valor unit.</div>
+                                <div className="checkout-desktop-table-header-title">Unit value</div>
                                 <div className="checkout-desktop-table-header-title">Qtd.</div>
-                                <div className="checkout-desktop-table-header-title">Valor final</div>
+                                <div className="checkout-desktop-table-header-title">Final value</div>
                             </div>
                             <div className="checkout-desktop-table-cards-list">
                                 {this.props.products.map((product) => <ProductCard data={product} {...this.props}/>)}
@@ -250,21 +250,21 @@ export default class Checkout extends Component {
                         <div className="checkout-desktop-step-three">
                             <div className="checkout-desktop-step-three-header">
                                 <div className="checkout-desktop-step-three-header-price">R$ 71,53</div>
-                                <div className="checkout-desktop-step-three-header-title">Café Edu</div>
+                                <div className="checkout-desktop-step-three-header-title">Edu's Coffee</div>
                             </div>
                             <div className="checkout-desktop-step-three-options">
                                 <div className="checkout-desktop-step-three-option-box" onClick={() => this.setState({radio_deliver: 'deliver'})}>
                                     <div className="checkout-desktop-step-three-option-box-radio">
                                         <Radio checked={this.state.radio_deliver === 'deliver' ? true : false}/>
-                                        <div className="checkout-desktop-step-three-option-box-radio-text" style={this.state.radio_deliver === 'deliver' ? {color:'red'} : {}}>Entrega</div>
+                                        <div className="checkout-desktop-step-three-option-box-radio-text" style={this.state.radio_deliver === 'deliver' ? {color:'red'} : {}}>Deliver</div>
                                     </div>
                                     <div className="checkout-desktop-step-three-option-box-info">
                                         <div className="checkout-desktop-step-three-option-box-info-text">
-                                            Floripa e região. Das 19h às 20h para pedidos confirmados até as 14h. 
-                                            Após esse horário entregaremos no próximo dia útil das 19h às 20h.
+                                            São Paulo and region. From 19:00 to 20:00 for confirmed orders until 14:00. 
+                                            After this time we will deliver the next business day from 19:00 to 20:00.
                                         </div>
                                         <div className="checkout-desktop-step-three-option-box-info-details">
-                                            Entrega (10%) R$ 0,00
+                                            Deliver (10%) R$ 0,00
                                         </div>
                                     </div>
                                 </div>
@@ -278,7 +278,7 @@ export default class Checkout extends Component {
                                             Rodovia José Carlos Daux, 4150, Saco Grande, Florianópolis - SC, 88032-005, Brasil
                                         </div>
                                         <div className="checkout-desktop-step-three-option-box-info-details">
-                                            Prazo: 1h após confirmação do pedido.
+                                            Deadline: 1 hour after order confirmation.
                                         </div>
                                     </div>
                                 </div>
@@ -298,7 +298,7 @@ export default class Checkout extends Component {
                         <div className="checkout-desktop-step-four">
                             <div className="checkout-desktop-step-four-header">
                                 <div className="checkout-desktop-step-four-header-price">R$ 71,53</div>
-                                <div className="checkout-desktop-step-four-header-title">Café Edu</div>
+                                <div className="checkout-desktop-step-four-header-title">Edu's Coffee</div>
                             </div>
                             <div className="checkout-desktop-step-four-options">
                                 <div className="checkout-desktop-step-four-option-box-left" onClick={() => this.setState({payment_type: 'online_payment'})}>
@@ -342,7 +342,7 @@ export default class Checkout extends Component {
                         <div className="checkout-desktop-step-five">
                             <div className="checkout-desktop-step-five-header">
                                 <div className="checkout-desktop-step-five-header-price">R$ 71,53</div>
-                                <div className="checkout-desktop-step-five-header-title">Café Edu</div>
+                                <div className="checkout-desktop-step-five-header-title">Edu's Coffee</div>
                             </div>
                             <div className="checkout-desktop-step-five-itens-summary">
                                 <div className="checkout-desktop-step-five-itens-container">

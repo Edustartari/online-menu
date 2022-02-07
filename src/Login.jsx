@@ -19,8 +19,8 @@ export default class Login extends Component {
                         <span className="material-icons">vpn_key</span>
                     </div>
                     <div className="login-desktop-title">
-                        <div className="login-desktop-title-description">Identifique-se</div>
-                        <div className="login-desktop-subtitle-description">Use seu perfil para fazer pedidos nas lojas parceiras do Kyte:</div>
+                        <div className="login-desktop-title-description">Identify yourself</div>
+                        <div className="login-desktop-subtitle-description">Use your profile to order from partner stores:</div>
                     </div>
                     <div className="login-desktop-buttons-container">
                         <div className="login-desktop-button">
@@ -36,7 +36,7 @@ export default class Login extends Component {
                             <div className="login-desktop-button-text">Facebook</div>
                         </div>
                     </div>
-                    <div className="login-desktop-button-enter">Entrar com email</div>
+                    <div className="login-desktop-button-enter">Login with email</div>
                 </div>
             </div>
         )

@@ -81,7 +81,7 @@ export default class MainPage extends Component {
                                 <div className="main-page-desktop-aside-menu-box-option-icon" style={this.state.category === 'Drinks' ? {display: 'flex'} : {visibility: 'hidden'}}>
                                     <span className="material-icons" style={this.state.category === 'Drinks' ? {color: 'red', fontWeight: 'bold'} : {}}>done</span>
                                 </div>
-                                <div className="main-page-desktop-aside-menu-box-option-text" style={this.state.category === 'Drinks' ? {fontWeight: 'bold'} : {}}>Bebidas</div>
+                                <div className="main-page-desktop-aside-menu-box-option-text" style={this.state.category === 'Drinks' ? {fontWeight: 'bold'} : {}}>Drinks</div>
                             </div>
                             <div className="main-page-desktop-aside-menu-box-option" onClick={() => this.menu_select('category','Coffee')}>
                                 <div className="main-page-desktop-aside-menu-box-option-icon" style={this.state.category === 'Coffee' ? {display: 'flex'} : {visibility: 'hidden'}}>
@@ -93,13 +93,13 @@ export default class MainPage extends Component {
                                 <div className="main-page-desktop-aside-menu-box-option-icon" style={this.state.category === 'Snacks' ? {display: 'flex'} : {visibility: 'hidden'}}>
                                     <span className="material-icons" style={this.state.category === 'Snacks' ? {color: 'red', fontWeight: 'bold'} : {}}>done</span>
                                 </div>
-                                <div className="main-page-desktop-aside-menu-box-option-text" style={this.state.category === 'Snacks' ? {fontWeight: 'bold'} : {}}>Lanches</div>
+                                <div className="main-page-desktop-aside-menu-box-option-text" style={this.state.category === 'Snacks' ? {fontWeight: 'bold'} : {}}>Snacks</div>
                             </div>
                             <div className="main-page-desktop-aside-menu-box-option" onClick={() => this.menu_select('category','Dessert')}>
                                 <div className="main-page-desktop-aside-menu-box-option-icon" style={this.state.category === 'Dessert' ? {display: 'flex'} : {visibility: 'hidden'}}>
                                     <span className="material-icons" style={this.state.category === 'Dessert' ? {color: 'red', fontWeight: 'bold'} : {}}>done</span>
                                 </div>
-                                <div className="main-page-desktop-aside-menu-box-option-text" style={this.state.category === 'Dessert' ? {fontWeight: 'bold'} : {}}>Sobremesas</div>
+                                <div className="main-page-desktop-aside-menu-box-option-text" style={this.state.category === 'Dessert' ? {fontWeight: 'bold'} : {}}>Desserts</div>
                             </div>
                         </div>
                     </div>
@@ -187,7 +187,7 @@ export default class MainPage extends Component {
                     </div>
                 </div>
                 <div className="main-page-desktop-content">
-                    <div className="main-page-desktop-content-title">Tudo</div>
+                    <div className="main-page-desktop-content-title">All</div>
                     <div className="main-page-desktop-content-list">
                         {this.state.filtered_products_list.map((product, index) => {
                             return (
