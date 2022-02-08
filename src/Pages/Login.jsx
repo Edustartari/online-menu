@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './styles/Login.css';
-import facebook_icon from './assets/facebook_icon.png';
-import google_icon from './assets/google_icon.png';
+import facebook_icon from '../assets/facebook_icon.png';
+import google_icon from '../assets/google_icon.png';
 
 export default class Login extends Component {
     constructor(props){

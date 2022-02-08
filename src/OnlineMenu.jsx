@@ -5,11 +5,11 @@ import {
     Route
 } from "react-router-dom";
 import Header from './Header';
-import MainPage from './MainPage';
-import User from './User';
-import Login from './Login';
-import ProductPage from './ProductPage';
-import Checkout from './Checkout';
+import MainPage from './Pages/MainPage';
+import User from './Pages/User';
+import Login from './Pages/Login';
+import ProductPage from './Pages/ProductPage';
+import Checkout from './Pages/Checkout';
 import PriceFooter from './components/PriceFooter.jsx';
 
 export default class OnlineMenu extends Component {

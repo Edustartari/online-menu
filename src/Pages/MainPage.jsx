@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './styles/MainPage.css';
-import ProductItem from './components/ProductItem.jsx';
-import products_list from './products.json';
+import ProductItem from '../components/ProductItem.jsx';
+import products_list from '../products.json';
 import _ from 'underscore';
 
 export default class MainPage extends Component {

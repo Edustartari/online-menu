@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import './styles/ProductPage.css';
-import cards from './assets/cards.png';
-import paid_market from './assets/paid_market.png';
-import whatsapp_icon from './assets/whatsapp_icon.png';
-import products_list from './products.json'
+import cards from '../assets/cards.png';
+import paid_market from '../assets/paid_market.png';
+import whatsapp_icon from '../assets/whatsapp_icon.png';
+import products_list from '../products.json'
 
 export default class ProductPage extends Component {
     constructor(props){
@@ -20,10 +20,10 @@ export default class ProductPage extends Component {
 
         var product_image;
         if(product.image.length > 0){
-            Image = require('./assets/' + product.image + '.jpg');
+            Image = require('../assets/' + product.image + '.jpg');
             product_image = Image.default
         } else {
-            Image = require('./assets/default_image.jpg');
+            Image = require('../assets/default_image.jpg');
             product_image = Image.default
         }
 

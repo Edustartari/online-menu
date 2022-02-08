@@ -8,7 +8,7 @@ import {
 import Stepper from '@mui/material/Stepper';
 import Step from '@mui/material/Step';
 import StepLabel from '@mui/material/StepLabel';
-import cards from './assets/cards.png';
+import cards from '../assets/cards.png';
 
 const steps = [
     'Select master blaster campaign settings',
@@ -75,10 +75,10 @@ class ProductCard extends React.Component {
 
         var product_image;
         if(this.props.data.product_info.image.length > 0){
-            Image = require('./assets/' + this.props.data.product_info.image + '.jpg');
+            Image = require('../assets/' + this.props.data.product_info.image + '.jpg');
             product_image = Image.default
         } else {
-            Image = require('./assets/default_image.jpg');
+            Image = require('../assets/default_image.jpg');
             product_image = Image.default
         }
 
@@ -347,10 +347,10 @@ export default class Checkout extends Component {
                                         {this.props.products.map((product, index) => {
                                             let photo;
                                             if(product.product_info.image.length > 0){
-                                                Image = require('./assets/' + product.product_info.image + '.jpg');
+                                                Image = require('../assets/' + product.product_info.image + '.jpg');
                                                 photo = Image.default
                                             } else {
-                                                Image = require('./assets/default_image.jpg');
+                                                Image = require('../assets/default_image.jpg');
                                                 photo = Image.default
                                             }
                                             return (
@@ -387,7 +387,7 @@ export default class Checkout extends Component {
                                             <div className="checkout-desktop-step-five-summary-box-title-icon">
                                                 <span className="material-icons">location_on</span>
                                             </div>
-                                            <div className="checkout-desktop-step-five-summary-box-title-text">Deliver</div>
+                                            <div className="checkout-desktop-step-five-summary-box-title-text">Deliver method</div>
                                         </div>
                                         <div className="checkout-desktop-step-five-summary-box-description">{this.state.radio_deliver}</div>
                                     </div>
