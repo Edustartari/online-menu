@@ -268,6 +268,12 @@
     justify-content: center;
     align-items: center;
 }
+.checkout-desktop-step-two-textfield .css-dpjnhs-MuiInputBase-root-MuiOutlinedInput-root {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
 .checkout-desktop-step-two-textfield {
     width: 100%;
     margin: 0 0 25px 0;
@@ -467,7 +473,7 @@
 }
 .checkout-desktop-step-five-itens-summary{
     background-color: white;
-    padding: 30px 0;
+    padding: 0 30px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -475,23 +481,29 @@
 }
 .checkout-desktop-step-five-itens-container {
     width: 50%;
-    padding: 0 30px;
+    padding: 30px 30px 30px 0;
+    border-right: 1px solid #dbdbdb;
+    margin: 0 30px 0 0;
 }
 .checkout-desktop-step-five-itens-title {
     font-weight: 600;
     margin: 0 0 15px 0;
 }
 .checkout-desktop-step-five-itens-details {
-
+    margin: 0 0 30px 0;
 }
 .checkout-desktop-step-five-item-card {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    align-items: flex-end;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid #dbdbdb;
+    padding: 0 0 15px 0;
+    margin: 20px 0 0 0;
 }
 .checkout-desktop-step-five-item-photo {
-
+    position: relative;
 }
 .checkout-desktop-step-five-item-photo img{
     width: 80px;
@@ -499,19 +511,68 @@
     border-radius: 10px;
 }
 .checkout-desktop-step-five-item-amount {
-
+    background-color: red;
+    padding: 3px;
+    border-radius: 100%;
+    width: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    top: -10px;
+    right: -10px;
 }
 .checkout-desktop-step-five-item-text {
-
+    width: 50%;
+    margin: 0 0 0 20px;
+    font-weight: 600;
 }
 .checkout-desktop-step-five-item-price {
-
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 30%;
+    margin: 0 0 0 10px;
+    font-weight: 700;
 }
 .checkout-desktop-step-five-itens-final-value {
     font-size: 23px;
-    font-weight: 400;
+    font-weight: 600;
     text-align: right;
 }
 .checkout-desktop-step-five-buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 30px;
+}
+.checkout-desktop-step-five-summary-container {
+    width: 50%;
+    margin: 30px 0;
+}
+.checkout-desktop-step-five-summary-box {
+    margin: 0 0 50px 0;
+}
+.checkout-desktop-step-five-summary-box-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+}
+.checkout-desktop-step-five-summary-box-title-icon {
 
 }
+.checkout-desktop-step-five-summary-box-title-text {
+    margin: 0 0 0 5px;
+}
+.checkout-desktop-step-five-summary-box-description {
+    width: 100%;
+    white-space: pre-wrap;
+}
+

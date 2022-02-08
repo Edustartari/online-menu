@@ -138,12 +138,8 @@ export default class Checkout extends Component {
         var lodash = require('lodash');
         var total_units = this.props.products.map((item) =>item.amount);
         total_units = lodash.sum(total_units);
-        // console.log('total_units')
-        // console.log(total_units)
-        // console.log(typeof(total_units))
         var final_value = this.props.products.map((item) => item.amount * item.product_info.price);
         final_value = lodash.sum(final_value);
-
         
         if(total_units === 0){
             return(
@@ -363,15 +359,59 @@ export default class Checkout extends Component {
                                                         <div className="checkout-desktop-step-five-item-amount">{product.amount}</div>
                                                         <img src={photo} alt="" />
                                                     </div>
-                                                    <div className="checkout-desktop-step-five-item-text">R$ {product.product_info.title}</div>
-                                                    <div className="checkout-desktop-step-five-item-price">{product.product_info.price * product.amount}</div>
+                                                    <div className="checkout-desktop-step-five-item-text">{product.product_info.title}</div>
+                                                    <div className="checkout-desktop-step-five-item-price">R$ {product.product_info.price * product.amount}</div>
                                                 </div>
                                             )
                                         })}
                                     </div>
                                     <div className="checkout-desktop-step-five-itens-final-value">Final value: R$ {final_value}</div>
                                 </div>
-                                <div>left side</div>
+                                <div className="checkout-desktop-step-five-summary-container">
+                                    <div className="checkout-desktop-step-five-summary-box">
+                                        <div className="checkout-desktop-step-five-summary-box-title">
+                                            <div className="checkout-desktop-step-five-summary-box-title-icon">
+                                                <span className="material-icons">attach_money</span>
+                                            </div>
+                                            <div className="checkout-desktop-step-five-summary-box-title-text">Payment method</div>
+                                        </div>
+                                        <div className="checkout-desktop-step-five-summary-box-description">
+                                            {this.state.payment_type === 'online_payment' && 'Online Payment'}
+                                            {this.state.payment_type === 'money' && 'Money'}
+                                            {this.state.payment_type === 'credit_card' && 'Credit Card'}
+                                            {this.state.payment_type === 'debit_card' && 'Debit Card'}
+                                        </div>
+                                    </div>
+                                    <div className="checkout-desktop-step-five-summary-box">
+                                        <div className="checkout-desktop-step-five-summary-box-title">
+                                            <div className="checkout-desktop-step-five-summary-box-title-icon">
+                                                <span className="material-icons">location_on</span>
+                                            </div>
+                                            <div className="checkout-desktop-step-five-summary-box-title-text">Deliver</div>
+                                        </div>
+                                        <div className="checkout-desktop-step-five-summary-box-description">{this.state.radio_deliver}</div>
+                                    </div>
+                                    <div className="checkout-desktop-step-five-summary-box">
+                                        <div className="checkout-desktop-step-five-summary-box-title">
+                                            <div className="checkout-desktop-step-five-summary-box-title-icon">
+                                                <span className="material-icons">person_outline</span>
+                                            </div>
+                                            <div className="checkout-desktop-step-five-summary-box-title-text">Your info</div>
+                                        </div>
+                                        <div className="checkout-desktop-step-five-summary-box-description">Celular/WhatsApp: +12345678910</div>
+                                    </div>
+                                    {this.state.notes &&
+                                        <div className="checkout-desktop-step-five-summary-box">
+                                            <div className="checkout-desktop-step-five-summary-box-title">
+                                                <div className="checkout-desktop-step-five-summary-box-title-icon">
+                                                    <span className="material-icons">comment</span>
+                                                </div>
+                                                <div className="checkout-desktop-step-five-summary-box-title-text">Observations</div>
+                                            </div>
+                                            <div className="checkout-desktop-step-five-summary-box-description">{this.state.notes}</div>
+                                        </div>
+                                    }
+                                </div>
                             </div>
                             <div className="checkout-desktop-step-five-buttons">
                                 <div className="checkout-desktop-button-foward">
