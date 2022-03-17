@@ -1,3 +1,7 @@
+/**************************************/
+/*************  DESKTOP  **************/
+/**************************************/
+
 .product-desktop-main-container {
     display: flex;
     flex-direction: row;
@@ -141,6 +145,159 @@
     margin: 0 0 0 30px;
 }
 .product-desktop-whatsapp-button-text {
+    margin: 0 30px 0 10px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+
+/**************************************/
+/*************  MOBILE  **************/
+/**************************************/
+
+.product-mobile-main-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 30px 10%;
+}
+.product-mobile-image {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+}
+.product-mobile-image img{
+    width: 70%;
+    border-radius: 10px;
+    min-height: 200px;
+}
+.product-mobile-info {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    height: 100%;
+    width: 700px;
+}
+.product-mobile-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.product-mobile-header-text {
+    font-size: 12px;
+    color: gray;
+    margin: 0 10px 0 0;
+}
+.product-mobile-header-separator{
+    height: 5px;
+    width: 5px;
+    background-color: gray;
+    margin: 0 10px 0 0;
+    border-radius: 10px;
+}
+.product-mobile-title {
+    font-weight: bold;
+    font-size: 25px;
+    margin: 10px 0;
+}
+.product-mobile-price {
+    font-weight: bold;
+    font-size: 17px;
+    color: #ff4e4e;
+}
+.product-mobile-payment {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0 0 0;
+}
+.product-mobile-payment-cards{
+
+}
+.product-mobile-payment-cards img{
+    width: 200px;
+}
+.product-mobile-payment-market{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.product-mobile-payment-market img{
+    width: 70px;
+}
+.product-mobile-payment-market-text{
+    font-size: 10px;
+    margin: 0 8px 0 0;
+}
+.product-mobile-description {
+    font-weight: 500;
+    margin: 20px 0 70px 0;
+    border-top: 1px solid lightgray;
+    padding: 15px 0 0 0;
+}
+.product-mobile-buttons {
+    border-top: 1px solid lightgray;
+    padding: 15px 0 0 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.product-mobile-add-button {
+    height: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: indianred;
+    color: white;
+    padding: 15px 0px;
+    border-radius: 5px;
+    margin: 0 20px 0 0;
+    width: 50%;
+}
+.product-mobile-add-button:hover{
+    cursor: pointer;
+}
+.product-mobile-add-button-text {
+    font-weight: bold;
+    margin: 0 0 0 30px;
+}
+.product-mobile-add-button-icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 30px 0 0px;
+}
+.product-mobile-add-button-icon .material-icons{
+
+}
+.product-mobile-whatsapp-button {
+    height: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    padding: 15px 0px;
+    background-color: lightgray;
+    border-radius: 5px;
+}
+.product-mobile-whatsapp-button:hover{
+    cursor: pointer;
+}
+.product-mobile-whatsapp-button img {
+    height: 25px;
+    margin: 0 0 0 30px;
+}
+.product-mobile-whatsapp-button-text {
     margin: 0 30px 0 10px;
     font-size: 15px;
     font-weight: 600;

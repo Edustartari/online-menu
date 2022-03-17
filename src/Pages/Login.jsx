@@ -1,9 +1,10 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { isMobile } from 'react-device-detect';
 import './styles/Login.css';
 import facebook_icon from '../assets/facebook_icon.png';
 import google_icon from '../assets/google_icon.png';
 
-export default class Login extends Component {
+class LoginDesktop extends Component {
     constructor(props){
         super(props)
         
@@ -40,5 +41,55 @@ export default class Login extends Component {
                 </div>
             </div>
         )
+    }
+}
+
+class LoginMobile extends Component {
+    constructor(props){
+        super(props)
+        
+        let pathname = window.location.pathname;
+        this.props.handle_change('url', pathname)
+    }
+    
+    render() {
+        return (
+            <div className="login-mobile-main-container">
+                <div className="login-mobile-box">
+                    <div className="login-mobile-image">
+                        <span className="material-icons">vpn_key</span>
+                    </div>
+                    <div className="login-mobile-title">
+                        <div className="login-mobile-title-description">Identify yourself</div>
+                        <div className="login-mobile-subtitle-description">Use your profile to order from partner stores:</div>
+                    </div>
+                    <div className="login-mobile-buttons-container">
+                        <div className="login-mobile-button">
+                            <div className="login-mobile-button-icon">
+                                <img src={google_icon} alt="" />
+                            </div>
+                            <div className="login-mobile-button-text">Google</div>
+                        </div>
+                        <div className="login-mobile-button">
+                            <div className="login-mobile-button-icon">
+                                <img src={facebook_icon} alt="" />
+                            </div>
+                            <div className="login-mobile-button-text">Facebook</div>
+                        </div>
+                    </div>
+                    <div className="login-mobile-button-enter">Login with email</div>
+                </div>
+            </div>
+        )
+    }
+}
+
+export default class Login extends Component {
+    render(){
+        if(isMobile){
+            return(<LoginMobile {...this.props}/>)
+        } else {
+            return(<LoginDesktop {...this.props}/>)
+        }
     }
 }

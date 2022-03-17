@@ -1,11 +1,12 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { isMobile } from 'react-device-detect';
 import './styles/ProductPage.css';
 import cards from '../assets/cards.png';
 import paid_market from '../assets/paid_market.png';
 import whatsapp_icon from '../assets/whatsapp_icon.png';
 import products_list from '../products.json'
 
-export default class ProductPage extends Component {
+class ProductPageDesktop extends Component {
     constructor(props){
         super(props)
 
@@ -65,5 +66,79 @@ export default class ProductPage extends Component {
                 </div>
             </div>
         )
+    }
+}
+
+
+class ProductPageMobile extends Component {
+    constructor(props){
+        super(props)
+
+        let pathname = window.location.pathname;
+        this.props.handle_change('url', pathname)
+    }
+    
+    render() {
+        let product_code = window.location.pathname.slice(1);
+        let product = products_list.products.filter((element) => element.code === parseInt(product_code))
+        product = product[0]
+
+        var product_image;
+        if(product.image.length > 0){
+            Image = require('../assets/' + product.image + '.jpg');
+            product_image = Image.default
+        } else {
+            Image = require('../assets/default_image.jpg');
+            product_image = Image.default
+        }
+
+        return (
+            <div className="product-mobile-main-container">
+                <div className="product-mobile-image">
+                    <img src={product_image} alt="" />
+                </div>
+                <div className="product-mobile-info">
+                    <div className="product-mobile-header">
+                        <div className="product-mobile-header-text">{product.category}</div>
+                        <div className="product-mobile-header-separator"></div>
+                        <div className="product-mobile-header-text">COD. {product.code}</div>
+                    </div>
+                    <div className="product-mobile-title">{product.title}</div>
+                    <div className="product-mobile-price">R$ {product.price}</div>
+                    <div className="product-mobile-payment">
+                        <div className="product-mobile-payment-cards">
+                            <img src={cards} alt="" />
+                        </div>
+                        <div className="product-mobile-payment-market">
+                            <div className="product-mobile-payment-market-text">Processed by</div>
+                            <img src={paid_market} alt="" />
+                        </div>
+                    </div>
+                    <div className="product-mobile-description">{product.description}</div>
+                    <div className="product-mobile-buttons">
+                        <div className="product-mobile-add-button" onClick={(event) => {this.props.add_product(product); event.stopPropagation()}}>
+                            <div className="product-mobile-add-button-text">Add item</div>
+                            <div className="product-mobile-add-button-icon">
+                                <span className="material-icons">add</span>
+                            </div>
+                        </div>
+                        <div className="product-mobile-whatsapp-button">
+                            <img src={whatsapp_icon} alt="" />
+                            <div className="product-mobile-whatsapp-button-text">Order by Whatsapp</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        )
+    }
+}
+
+export default class ProductPage extends Component {
+    render(){
+        if(isMobile){
+            return(<ProductPageDesktop {...this.props}/>)
+        } else {
+            return(<ProductPageMobile {...this.props}/>)
+        }
     }
 }

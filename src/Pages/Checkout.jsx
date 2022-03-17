@@ -153,7 +153,7 @@ export default class Checkout extends Component {
                         </div>
                         <div className="checkout-desktop-empty-cart-text">Your cart is empty</div>
                         <Link to="/">
-                            <div className="checkout-desktop-empty-cart-button">Voltar</div>
+                            <div className="checkout-desktop-empty-cart-button">Back</div>
                         </Link>
                     </div>
                 </div>
