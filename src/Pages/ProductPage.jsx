@@ -99,7 +99,7 @@ class ProductPageMobile extends Component {
                 </div>
                 <div className="product-mobile-info">
                     <div className="product-mobile-header">
-                        <div className="product-mobile-header-text">{product.category}</div>
+                        <div className="product-mobile-header-text">{product.category.toUpperCase()}</div>
                         <div className="product-mobile-header-separator"></div>
                         <div className="product-mobile-header-text">COD. {product.code}</div>
                     </div>
@@ -110,21 +110,30 @@ class ProductPageMobile extends Component {
                             <img src={cards} alt="" />
                         </div>
                         <div className="product-mobile-payment-market">
-                            <div className="product-mobile-payment-market-text">Processed by</div>
-                            <img src={paid_market} alt="" />
+                            <div className="product-mobile-payment-whatsapp-button">
+                                <div className="product-mobile-payment-whatsapp-text">Order by</div>
+                                <img src={whatsapp_icon} alt="" />
+                            </div>
+                            <div className="product-mobile-payment-market-column">
+                                <div className="product-mobile-payment-market-text">Processed by</div>
+                                <img src={paid_market} alt="" />
+                            </div>
                         </div>
                     </div>
                     <div className="product-mobile-description">{product.description}</div>
                     <div className="product-mobile-buttons">
+                        <div className="product-mobile-cart-button">
+                            <div className="product-mobile-cart-button-icon">
+                                <span class="material-icons">shopping_cart</span>
+                            </div>
+                            <div className="product-mobile-cart-button-number">1</div>
+                        </div>
                         <div className="product-mobile-add-button" onClick={(event) => {this.props.add_product(product); event.stopPropagation()}}>
+                            <div className="product-mobile-add-button-price">R$ {product.price}</div>
                             <div className="product-mobile-add-button-text">Add item</div>
                             <div className="product-mobile-add-button-icon">
                                 <span className="material-icons">add</span>
                             </div>
-                        </div>
-                        <div className="product-mobile-whatsapp-button">
-                            <img src={whatsapp_icon} alt="" />
-                            <div className="product-mobile-whatsapp-button-text">Order by Whatsapp</div>
                         </div>
                     </div>
                 </div>
@@ -136,9 +145,9 @@ class ProductPageMobile extends Component {
 export default class ProductPage extends Component {
     render(){
         if(isMobile){
-            return(<ProductPageDesktop {...this.props}/>)
-        } else {
             return(<ProductPageMobile {...this.props}/>)
+        } else {
+            return(<ProductPageDesktop {...this.props}/>)
         }
     }
 }
