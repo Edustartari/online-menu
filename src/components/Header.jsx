@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { isMobile } from 'react-device-detect';
+import MobileDrawer from './MobileDrawer'
 import './styles/Header.css';
 import {
     Link
@@ -109,18 +110,10 @@ class HeaderMobile extends Component {
         } else if (this.props.url === '/') {
             return (
                 <div className="header-mobile-home-container" id="header-mobile-home-container">
-                    <div className="header-mobile-home-search">
-                        <div className="header-mobile-home-search-icon">
-                            <span className="material-icons">search</span>
-                        </div>
-                        <div className="header-mobile-home-search-input"></div>
-                    </div>
-                    <Link to="/" onClick={() => this.props.handle_change('url', pathname)}>
-                        <div className="header-mobile-home-title">Edu's Coffee</div>
-                    </Link>
+                    <MobileDrawer/>
                     <Link to="/login" onClick={() => this.props.handle_change('url', pathname)}>
                         <div className="header-mobile-home-profile">
-                            <div className="header-mobile-home-profile-login">LOGIN OR CREATE ACCOUNT</div>
+                            <div className="header-mobile-home-profile-login">LOGIN</div>
                             <div className="header-mobile-home-profile-icon">
                                 <span className="material-icons">person_outline</span>
                             </div>
@@ -142,7 +135,7 @@ class HeaderMobile extends Component {
                     </Link>
                     <Link to="/login" onClick={() => this.props.handle_change('url', pathname)}>
                         <div className="header-mobile-home-profile">
-                            <div className="header-mobile-home-profile-login">LOGIN OR CREATE ACCOUNT</div>
+                            <div className="header-mobile-home-profile-login">LOGIN</div>
                             <div className="header-mobile-home-profile-icon">
                                 <span className="material-icons">person_outline</span>
                             </div>
