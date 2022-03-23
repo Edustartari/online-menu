@@ -3,6 +3,7 @@ import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import Button from '@mui/material/Button';
 import whatsapp_icon from '../assets/whatsapp_icon.png';
+import './styles/MobileDrawer.css'
 
 export default function MobileDrawer() {
     const [state, setState] = React.useState({
@@ -19,7 +20,7 @@ export default function MobileDrawer() {
 
   const list = (anchor) => (
     <Box
-        sx={{ width: 250 }}
+        sx={{ width: 290 }}
         role="presentation"
         onClick={toggleDrawer(anchor, false)}
         onKeyDown={toggleDrawer(anchor, false)}
@@ -30,13 +31,13 @@ export default function MobileDrawer() {
                     <span className="material-icons">clear</span>
                 </div>
                 <div className="drawer-mobile-top-options">
-                    <div className="drawer-mobile-top-options-item">Login</div>
-                    <div className="drawer-mobile-top-options-item">My Account</div>
-                    <div className="drawer-mobile-top-options-item">My Orders</div>
+                    <div className="drawer-mobile-top-options-item">LOGIN</div>
+                    <div className="drawer-mobile-top-options-item">MY ACCOUNT</div>
+                    <div className="drawer-mobile-top-options-item">MY ORDERS</div>
                 </div>
             </div>
             <div className="drawer-mobile-bottom">
-                <div className="drawer-mobile-bottom-title"></div>
+                <div className="drawer-mobile-bottom-title">Edu's Coffee</div>
                 <div className="drawer-mobile-bottom-options">
                     <div className="drawer-mobile-bottom-options-item">
                         <div className="drawer-mobile-bottom-options-icon">
@@ -69,16 +70,16 @@ export default function MobileDrawer() {
                         <div className="drawer-mobile-bottom-options-info">Rodovia José Carlos Daux, 4150, São Paulo - SP</div>
                     </div>
                 </div>
-                <div className="drawer-mobile-bottom-footer"></div>
+                {/* <div className="drawer-mobile-bottom-footer"></div> */}
             </div>
         </div>
     </Box>
   );
 
   return (
-    <div>
+    <div className="drawer-mobile-main-container">
         <React.Fragment key={'left'}>
-            <Button onClick={toggleDrawer('left', true)}>
+            <Button onClick={toggleDrawer('left', true)} className="drawer-mobile-main-container-button">
                 <span className="material-icons">menu</span>
             </Button>
             <Drawer
