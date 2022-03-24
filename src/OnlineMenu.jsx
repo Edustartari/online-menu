@@ -33,6 +33,8 @@ export default class OnlineMenu extends Component {
     }
 
     add_product(product){
+        console.log('')
+        console.log('add_product')
         let temporary_list = [...this.state.checkout_products_list]
 
         if(this.state.is_checkout_list_empty){

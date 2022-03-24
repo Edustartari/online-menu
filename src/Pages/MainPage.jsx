@@ -268,7 +268,7 @@ class MainPageMobile extends Component {
                 <div className="main-page-mobile-menu">
                     <div className="main-page-mobile-menu-options">
                         <Tabs value={this.state.category} onClick={(value) => this.menu_select('category', value.target.textContent)} aria-label="basic tabs example">
-                            <Tab label="All" value="all"/>
+                            <Tab label="all" value="all"/>
                             <Tab label="highlights" value="highlights"/>
                             <Tab label="Drinks" value="Drinks"/>
                             <Tab label="Coffee" value="Coffee"/>
@@ -277,8 +277,12 @@ class MainPageMobile extends Component {
                         </Tabs>
                     </div>
                     <div className="main-page-mobile-menu-filter">
-                        <div>Filter btn</div>
-                        <div>Display btn</div>
+                        <div className="main-page-mobile-menu-filter-button">
+                            <span className="material-icons">filter_alt</span>
+                        </div>
+                        <div className="main-page-mobile-menu-filter-button" onClick={() => this.setState({display_mode: this.state.display_mode === 'grid' ? 'list' : 'grid'})}>
+                            <span className="material-icons">{this.state.display_mode === 'grid'? 'subtitles' : 'format_list_bulleted'}</span>
+                        </div>
                     </div>
                 </div>
                 {/* <div className="main-page-mobile-aside-menu">

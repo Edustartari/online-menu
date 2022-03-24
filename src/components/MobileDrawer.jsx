@@ -70,7 +70,6 @@ export default function MobileDrawer() {
                         <div className="drawer-mobile-bottom-options-info">Rodovia José Carlos Daux, 4150, São Paulo - SP</div>
                     </div>
                 </div>
-                {/* <div className="drawer-mobile-bottom-footer"></div> */}
             </div>
         </div>
     </Box>
