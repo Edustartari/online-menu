@@ -79,6 +79,10 @@ class ProductPageMobile extends Component {
     }
     
     render() {
+        var lodash = require('lodash');
+        var total_units = this.props.products.map((item) =>item.amount);
+        total_units = lodash.sum(total_units);
+
         let product_code = window.location.pathname.slice(1);
         let product = products_list.products.filter((element) => element.code === parseInt(product_code))
         product = product[0]
@@ -126,7 +130,7 @@ class ProductPageMobile extends Component {
                             <div className="product-mobile-cart-button-icon">
                                 <span class="material-icons">shopping_cart</span>
                             </div>
-                            <div className="product-mobile-cart-button-number">1</div>
+                            <div className="product-mobile-cart-button-number">{total_units}</div>
                         </div>
                         <div className="product-mobile-add-button" onClick={(event) => {this.props.add_product(product); event.stopPropagation()}}>
                             <div className="product-mobile-add-button-price">R$ {product.price}</div>

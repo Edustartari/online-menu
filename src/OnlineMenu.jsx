@@ -4,6 +4,7 @@ import {
     Switch,
     Route
 } from "react-router-dom";
+import { isMobile } from 'react-device-detect';
 import Header from './components/Header';
 import MainPage from './Pages/MainPage';
 import User from './Pages/User';
@@ -85,7 +86,7 @@ export default class OnlineMenu extends Component {
         }
     }
 
-    render() {
+    render() {        
         return (
             <div>
                 <Router>
@@ -100,13 +101,20 @@ export default class OnlineMenu extends Component {
                         <Route path="/checkout">
                             <Checkout products={this.state.checkout_products_list} handle_change={this.handle_change} remove_product={this.remove_product}/>
                         </Route>
-                        <Route path="/:id" children={<ProductPage add_product={this.add_product} handle_change={this.handle_change}/>} />
+                        <Route path="/:id" children={<ProductPage products={this.state.checkout_products_list} add_product={this.add_product} handle_change={this.handle_change}/>} />
                         <Route path="/">
                             <MainPage add_product={this.add_product} handle_change={this.handle_change}/>
                         </Route>
                     </Switch>
                     {(this.state.is_checkout_list_empty === false && this.state.url !== '/login') && (this.state.is_checkout_list_empty === false && this.state.url !== '/checkout') &&
-                        <PriceFooter products={this.state.checkout_products_list}/>
+                        <React.Fragment>
+                            {(isMobile && this.state.is_checkout_list_empty === false && this.state.url === '/') &&
+                                <PriceFooter products={this.state.checkout_products_list}/>
+                            }
+                            {!isMobile &&
+                                <PriceFooter products={this.state.checkout_products_list}/>
+                            }
+                        </React.Fragment>
                     }
                 </Router>
             </div>

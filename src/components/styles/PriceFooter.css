@@ -1,3 +1,7 @@
+/**************************************/
+/*************  DESKTOP  **************/
+/**************************************/
+
 .price-footer-desktop-container {
 	display: flex;
 	flex-direction: row;
@@ -40,5 +44,64 @@
 	margin: 3px 0 0 5px;
 }
 .price-footer-desktop-button-arrow .material-icons{
+    font-size: 20px;
+}
+
+
+/**************************************/
+/*************  MOBILE  **************/
+/**************************************/
+
+.price-footer-mobile-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0px;
+    z-index: 2;
+	width: calc(100% - 60px);
+}
+.price-footer-mobile-container a {
+	text-decoration: unset;
+	width: 100%;
+}
+.price-footer-mobile-button {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #ff4e4e;
+	padding: 15px 20px;
+	border-radius: 5px;
+    color: white;
+	width: 100%;
+}
+.price-footer-mobile-button {
+    cursor: pointer;
+}
+.price-footer-mobile-button-icon {
+	display: flex;
+}
+.price-footer-mobile-button-info {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: center;
+}
+.price-footer-mobile-button-text {
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 1;
+}
+.price-footer-mobile-button-arrow {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	margin: 3px 0 0 5px;
+}
+.price-footer-mobile-button-arrow .material-icons{
     font-size: 20px;
 }

@@ -278,6 +278,7 @@
     padding: 15px;
     border-radius: 5px;
     margin: 0 15px 0 0;
+    position: relative;
 }
 .product-mobile-cart-button-icon {
     display: flex;
@@ -286,7 +287,17 @@
     align-items: center;
 }
 .product-mobile-cart-button-number {
-
+    position: absolute;
+    background-color: gray;
+    display: flex;
+    padding: 0px 7px 2px 7px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    top: -9px;
+    right: -5px;
+    border: 1px solid white;
 }
 .product-mobile-add-button {
     display: flex;
@@ -298,9 +309,13 @@
     padding: 15px;
     border-radius: 5px;
     width: 100%;
+    box-shadow: 2px 2px gray;
 }
-.product-mobile-add-button:hover{
-    cursor: pointer;
+.product-mobile-add-button:active {
+    position: relative;
+    bottom: -2px;
+    right: -2px;
+    background-color: rgb(218, 117, 117);
 }
 .product-mobile-add-button-text {
     font-weight: bold;
