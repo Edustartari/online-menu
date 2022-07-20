@@ -268,6 +268,9 @@
     bottom: 0px;
     background-color: white;
 }
+.product-mobile-buttons a {
+    text-decoration: none;
+}
 .product-mobile-cart-button {
     display: flex;
     flex-direction: row;

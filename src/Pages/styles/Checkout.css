@@ -12,7 +12,7 @@
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
-	width: 100%;
+	width: 80%;
     margin: 5px 0 40px 0;
 }
 .checkout-desktop-header-title {
@@ -27,7 +27,7 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-    width: 100%;
+    width: 80%;
 }
 .checkout-desktop-table-header {
 	display: flex;
@@ -262,7 +262,7 @@
     text-align: center;
 }
 .checkout-desktop-step-two {
-    width: 50%;
+    width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: center;

@@ -160,4 +160,19 @@
 .main-page-mobile-content-list a:nth-child(3n){
     margin-right: 0;
 }
+.filter-drawer-mobile-container {
+    padding: 20px;
+}
+.filter-drawer-mobile-main-container {
+
+}
+.filter-drawer-mobile-options{
+    font-size: 15px;
+    color: #444e5e;
+    padding: 0 0 20px 0;
+}
+.filter-drawer-mobile-options:nth-last-child(1){
+    padding-bottom: 0px;
+}
+
 

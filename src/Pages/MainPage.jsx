@@ -2,6 +2,12 @@ import React, { Component } from 'react';
 import { isMobile } from 'react-device-detect';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
+
+import Box from '@mui/material/Box';
+import Drawer from '@mui/material/Drawer';
+import Button from '@mui/material/Button';
+import whatsapp_icon from '../assets/whatsapp_icon.png';
+
 import './styles/MainPage.css';
 import ProductItem from '../components/ProductItem.jsx';
 import products_list from '../products.json';
@@ -11,7 +17,7 @@ class MainPageDesktop extends Component {
     constructor(props){
         super(props)
         this.state = {
-            category: 'all',
+            category: 'All',
             sort_by: 'category',
             display_mode: 'grid', // grid, list
             original_products_list: products_list.products,
@@ -46,9 +52,9 @@ class MainPageDesktop extends Component {
         if(option === 'category'){
             let temporary_list = [...this.state.original_products_list]
             let new_list;
-            if(value === 'all'){
+            if(value === 'All'){
                 new_list = temporary_list
-            } else if(value === 'highlights') {
+            } else if(value === 'Highlights') {
                 new_list = temporary_list.filter((item) => item.is_highlight)
             } else {
                 new_list = temporary_list.filter((item) => item.category === value)                
@@ -68,17 +74,17 @@ class MainPageDesktop extends Component {
                     <div className="main-page-desktop-aside-menu-box">
                         <div className="main-page-desktop-aside-menu-box-title">Categories</div>
                         <div className="main-page-desktop-aside-menu-box-option-list">
-                            <div className="main-page-desktop-aside-menu-box-option" onClick={() => this.menu_select('category','all')}>
-                                <div className="main-page-desktop-aside-menu-box-option-icon" style={this.state.category === 'all' ? {display: 'flex'} : {visibility: 'hidden'}}>
-                                    <span className="material-icons" style={this.state.category === 'all' ? {color: 'red', fontWeight: 'bold'} : {}}>done</span>
+                            <div className="main-page-desktop-aside-menu-box-option" onClick={() => this.menu_select('category','All')}>
+                                <div className="main-page-desktop-aside-menu-box-option-icon" style={this.state.category === 'All' ? {display: 'flex'} : {visibility: 'hidden'}}>
+                                    <span className="material-icons" style={this.state.category === 'All' ? {color: 'red', fontWeight: 'bold'} : {}}>done</span>
                                 </div>
-                                <div className="main-page-desktop-aside-menu-box-option-text" style={this.state.category === 'all' ? {fontWeight: 'bold'} : {}}>All</div>
+                                <div className="main-page-desktop-aside-menu-box-option-text" style={this.state.category === 'All' ? {fontWeight: 'bold'} : {}}>All</div>
                             </div>
-                            <div className="main-page-desktop-aside-menu-box-option" onClick={() => this.menu_select('category','highlights')}>
-                                <div className="main-page-desktop-aside-menu-box-option-icon" style={this.state.category === 'highlights' ? {display: 'flex'} : {visibility: 'hidden'}}>
-                                    <span className="material-icons" style={this.state.category === 'highlights' ? {color: 'red', fontWeight: 'bold'} : {}}>done</span>
+                            <div className="main-page-desktop-aside-menu-box-option" onClick={() => this.menu_select('category','Highlights')}>
+                                <div className="main-page-desktop-aside-menu-box-option-icon" style={this.state.category === 'Highlights' ? {display: 'flex'} : {visibility: 'hidden'}}>
+                                    <span className="material-icons" style={this.state.category === 'Highlights' ? {color: 'red', fontWeight: 'bold'} : {}}>done</span>
                                 </div>
-                                <div className="main-page-desktop-aside-menu-box-option-text" style={this.state.category === 'highlights' ? {fontWeight: 'bold'} : {}}>Highlights</div>
+                                <div className="main-page-desktop-aside-menu-box-option-text" style={this.state.category === 'Highlights' ? {fontWeight: 'bold'} : {}}>Highlights</div>
                             </div>
                             <div className="main-page-desktop-aside-menu-box-option" onClick={() => this.menu_select('category','Drinks')}>
                                 <div className="main-page-desktop-aside-menu-box-option-icon" style={this.state.category === 'Drinks' ? {display: 'flex'} : {visibility: 'hidden'}}>
@@ -90,7 +96,7 @@ class MainPageDesktop extends Component {
                                 <div className="main-page-desktop-aside-menu-box-option-icon" style={this.state.category === 'Coffee' ? {display: 'flex'} : {visibility: 'hidden'}}>
                                     <span className="material-icons" style={this.state.category === 'Coffee' ? {color: 'red', fontWeight: 'bold'} : {}}>done</span>
                                 </div>
-                                <div className="main-page-desktop-aside-menu-box-option-text" style={this.state.category === 'Coffee' ? {fontWeight: 'bold'} : {}}>Cafés</div>
+                                <div className="main-page-desktop-aside-menu-box-option-text" style={this.state.category === 'Coffee' ? {fontWeight: 'bold'} : {}}>Coffee</div>
                             </div>
                             <div className="main-page-desktop-aside-menu-box-option" onClick={() => this.menu_select('category','Snacks')}>
                                 <div className="main-page-desktop-aside-menu-box-option-icon" style={this.state.category === 'Snacks' ? {display: 'flex'} : {visibility: 'hidden'}}>
@@ -190,7 +196,7 @@ class MainPageDesktop extends Component {
                     </div>
                 </div>
                 <div className="main-page-desktop-content">
-                    <div className="main-page-desktop-content-title">All</div>
+                    <div className="main-page-desktop-content-title">{this.state.category}</div>
                     <div className="main-page-desktop-content-list">
                         {this.state.filtered_products_list.map((product, index) => {
                             return (
@@ -204,11 +210,60 @@ class MainPageDesktop extends Component {
     }
 }
 
+function FilterDrawer(props) {
+    const [state, setState] = React.useState({
+        bottom: false,
+    });
+
+    const toggleDrawer = (anchor, open) => (event) => {
+        if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+            return;
+        }
+
+        setState({ ...state, [anchor]: open });
+    };
+
+    const list = (anchor) => (
+        <Box
+            sx={{ width: 290 }}
+            role="presentation"
+            onClick={toggleDrawer(anchor, false)}
+            onKeyDown={toggleDrawer(anchor, false)}
+        >
+            <div className="filter-drawer-mobile-container">
+                <div className='filter-drawer-mobile-options' onClick={() => props.menu_select('sort_by','category')} >Categories</div>
+                <div className='filter-drawer-mobile-options' onClick={() => props.menu_select('sort_by','lowest_price')} >Lowest price</div>
+                <div className='filter-drawer-mobile-options' onClick={() => props.menu_select('sort_by','highest_price')} >Highest price</div>
+                <div className='filter-drawer-mobile-options' onClick={() => props.menu_select('sort_by','a_z')} >A-Z</div>
+                <div className='filter-drawer-mobile-options' onClick={() => props.menu_select('sort_by','z_a')} >Z-A</div>
+            </div>
+        </Box>
+    );
+
+  return (
+        <div className="filter-drawer-mobile-main-container">
+            <React.Fragment key={'bottom'}>
+                <div className="main-page-mobile-menu-filter-button" onClick={toggleDrawer('bottom', true)}>
+                    <span className="material-icons">filter_alt</span>
+                </div>
+                <Drawer
+                    anchor={'bottom'}
+                    open={state['bottom']}
+                    onClose={toggleDrawer('bottom', false)}
+                    onOpen={toggleDrawer('bottom', true)}
+                >
+                    {list('bottom')}
+                </Drawer>
+            </React.Fragment>
+        </div>
+    );
+}
+
 class MainPageMobile extends Component {
     constructor(props){
         super(props)
         this.state = {
-            category: 'all',
+            category: 'All',
             sort_by: 'category',
             display_mode: 'grid', // grid, list
             original_products_list: products_list.products,
@@ -247,9 +302,9 @@ class MainPageMobile extends Component {
         if(option === 'category'){
             let temporary_list = [...this.state.original_products_list]
             let new_list;
-            if(value === 'all'){
+            if(value === 'All'){
                 new_list = temporary_list
-            } else if(value === 'highlights') {
+            } else if(value === 'Highlights') {
                 new_list = temporary_list.filter((item) => item.is_highlight)
             } else {
                 new_list = temporary_list.filter((item) => item.category === value)                
@@ -268,8 +323,8 @@ class MainPageMobile extends Component {
                 <div className="main-page-mobile-menu">
                     <div className="main-page-mobile-menu-options">
                         <Tabs value={this.state.category} onClick={(value) => this.menu_select('category', value.target.textContent)} aria-label="basic tabs example">
-                            <Tab label="all" value="all"/>
-                            <Tab label="highlights" value="highlights"/>
+                            <Tab label="All" value="All"/>
+                            <Tab label="Highlights" value="Highlights"/>
                             <Tab label="Drinks" value="Drinks"/>
                             <Tab label="Coffee" value="Coffee"/>
                             <Tab label="Snacks" value="Snacks"/>
@@ -277,9 +332,9 @@ class MainPageMobile extends Component {
                         </Tabs>
                     </div>
                     <div className="main-page-mobile-menu-filter">
-                        <div className="main-page-mobile-menu-filter-button">
-                            <span className="material-icons">filter_alt</span>
-                        </div>
+                        
+                        <FilterDrawer {...this.state} menu_select={this.menu_select}/>
+
                         <div className="main-page-mobile-menu-filter-button" onClick={() => this.setState({display_mode: this.state.display_mode === 'grid' ? 'list' : 'grid'})}>
                             <span className="material-icons">{this.state.display_mode === 'grid'? 'subtitles' : 'format_list_bulleted'}</span>
                         </div>

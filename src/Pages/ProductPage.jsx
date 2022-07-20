@@ -4,7 +4,10 @@ import './styles/ProductPage.css';
 import cards from '../assets/cards.png';
 import paid_market from '../assets/paid_market.png';
 import whatsapp_icon from '../assets/whatsapp_icon.png';
-import products_list from '../products.json'
+import products_list from '../products.json';
+import {
+    Link
+} from "react-router-dom";
 
 class ProductPageDesktop extends Component {
     constructor(props){
@@ -126,12 +129,14 @@ class ProductPageMobile extends Component {
                     </div>
                     <div className="product-mobile-description">{product.description}</div>
                     <div className="product-mobile-buttons">
-                        <div className="product-mobile-cart-button">
-                            <div className="product-mobile-cart-button-icon">
-                                <span class="material-icons">shopping_cart</span>
+                        <Link to="/checkout">
+                            <div className="product-mobile-cart-button">
+                                <div className="product-mobile-cart-button-icon">
+                                    <span class="material-icons">shopping_cart</span>
+                                </div>
+                                <div className="product-mobile-cart-button-number">{total_units}</div>
                             </div>
-                            <div className="product-mobile-cart-button-number">{total_units}</div>
-                        </div>
+                        </Link>
                         <div className="product-mobile-add-button" onClick={(event) => {this.props.add_product(product); event.stopPropagation()}}>
                             <div className="product-mobile-add-button-price">R$ {product.price}</div>
                             <div className="product-mobile-add-button-text">Add item</div>
