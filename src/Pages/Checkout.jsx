@@ -566,13 +566,8 @@ class CheckoutMobile extends Component {
                             </Link>
                         }
                         {this.state.active_step !== 0 &&
-                            <div className="checkout-mobile-header-left">
-                                <span 
-                                    className="material-icons"
-                                    onClick={() => this.setState({active_step: this.state.active_step - 1})}
-                                >
-                                    arrow_back
-                                </span>
+                            <div className="checkout-mobile-header-left" onClick={() => this.setState({active_step: this.state.active_step - 1})}>
+                                <span className="material-icons">arrow_back</span>
                                 <div className="checkout-mobile-header-icon-text">
                                     {this.state.active_step === 1 && <React.Fragment>Any note?</React.Fragment>}
                                     {this.state.active_step === 2 && <React.Fragment>What do you prefer?</React.Fragment>}
@@ -605,7 +600,7 @@ class CheckoutMobile extends Component {
                                 <TextField
                                     id="outlined-required"
                                     multiline
-                                    maxRows={8}
+                                    maxRows={28}
                                     value={this.state.notes}
                                     onChange={(event) => this.setState({notes: event.target.value})}
                                 />
@@ -614,10 +609,6 @@ class CheckoutMobile extends Component {
                     }
                     {this.state.active_step === 2 &&
                         <div className="checkout-mobile-step-three">
-                            <div className="checkout-mobile-step-three-header">
-                                <div className="checkout-mobile-step-three-header-price">R$ 71,53</div>
-                                <div className="checkout-mobile-step-three-header-title">Edu's Coffee</div>
-                            </div>
                             <div className="checkout-mobile-step-three-options">
                                 <div className="checkout-mobile-step-three-option-box" onClick={() => this.setState({radio_deliver: 'deliver'})}>
                                     <div className="checkout-mobile-step-three-option-box-radio">
@@ -653,10 +644,6 @@ class CheckoutMobile extends Component {
                     }
                     {this.state.active_step === 3 &&
                         <div className="checkout-mobile-step-four">
-                            <div className="checkout-mobile-step-four-header">
-                                <div className="checkout-mobile-step-four-header-price">R$ 71,53</div>
-                                <div className="checkout-mobile-step-four-header-title">Edu's Coffee</div>
-                            </div>
                             <div className="checkout-mobile-step-four-options">
                                 <div className="checkout-mobile-step-four-option-box-left" onClick={() => this.setState({payment_type: 'online_payment'})}>
                                     <div className="checkout-mobile-step-four-option-box-left-title">Online Payment</div>
@@ -769,7 +756,7 @@ class CheckoutMobile extends Component {
                     }
                     <div className="checkout-mobile-buttons-container">
                         <div onClick={() => this.setState({active_step: this.state.active_step + 1})} className="checkout-mobile-button-foward">
-                            <div className="checkout-mobile-button-foward-text">{this.state.active_step} of 5</div>
+                            <div className="checkout-mobile-button-foward-text">{this.state.active_step + 1} of 5</div>
                             <div className="checkout-mobile-button-foward-icon">
                                 <span className="material-icons">arrow_forward_ios</span>
                             </div>

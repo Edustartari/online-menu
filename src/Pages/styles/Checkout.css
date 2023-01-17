@@ -820,43 +820,23 @@
     width: 100%;
 }
 .checkout-mobile-step-two-textfield .css-dpjnhs-MuiInputBase-root-MuiOutlinedInput-root{
-    height: 250px;
     background-color: white;
+    min-height: 280px;
 }
 .checkout-mobile-step-three {
-    border-radius: 10px;
-    box-shadow: 1px 1px 10px 0px #888888;
-    width: 80%;
-}
-.checkout-mobile-step-three-header {
-    padding: 30px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-.checkout-mobile-step-three-header-price {
-    font-weight: 600;
-    font-size: 30px;
-}
-.checkout-mobile-step-three-header-title {
-    border-radius: 30px;
-    background-color: white;
-    padding: 15px;
-    color: red;
-    font-weight: 700;
-    line-height: 1;
 }
 .checkout-mobile-step-three-options {
     background-color: white;
     padding: 30px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
     align-items: flex-start;
 }
-.checkout-mobile-step-three-option-box {
-    width: 30%;
+.checkout-mobile-step-three-option-box:nth-child(1) {
+    border-bottom: 1px solid #dbdbdb;
+    padding: 0 0 20px 0;
+    margin: 0 0 10px 0;
 }
 .checkout-mobile-step-three-option-box:hover{
     cursor: pointer;
@@ -866,7 +846,6 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    margin: 0 0 0 30px;
 }
 .checkout-mobile-step-three-option-box-radio .css-vqmohf-MuiButtonBase-root-MuiRadio-root.Mui-checked{
     color: red;
@@ -885,34 +864,13 @@
     font-weight: 500;
 }
 .checkout-mobile-step-four {
-    border-radius: 10px;
-    box-shadow: 1px 1px 10px 0px #888888;
-    width: 80%;
-}
-.checkout-mobile-step-four-header {
-    padding: 30px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-.checkout-mobile-step-four-header-price {
-    font-weight: 600;
-    font-size: 30px;
-}
-.checkout-mobile-step-four-header-title {
-    border-radius: 30px;
-    background-color: white;
-    padding: 15px;
-    color: red;
-    font-weight: 700;
-    line-height: 1;
+
 }
 .checkout-mobile-step-four-options {
     background-color: white;
-    padding: 30px;
+    padding: 13px 0;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
     align-items: flex-start;
 }
@@ -920,7 +878,8 @@
     color: red
 }
 .checkout-mobile-step-four-option-box-left {
-    width: 40%;
+    padding: 0 10px 10px;
+    border-bottom: 10px solid #f5f5f5;
 }
 .checkout-mobile-step-four-option-box-left:hover{
     cursor: pointer;
@@ -929,7 +888,8 @@
     text-transform: uppercase;
     color: gray;
     font-weight: 600;
-    margin: 0 0 10px 0;
+    margin: 0 0 5px 0;
+    font-size: 13px;
 }
 .checkout-mobile-step-four-option-box-left-button {
     display: flex;
@@ -947,20 +907,24 @@
     width: 100%;
 }
 .checkout-mobile-step-four-option-box-right {
-    width: 30%;
+    padding: 10px 10px 0px 10px;
+    width: calc(100% - 20px);
 }
 .checkout-mobile-step-four-option-box-right-title {
     text-transform: uppercase;
     color: gray;
     font-weight: 600;
     margin: 0 0 10px 0;
+    font-size: 13px;
 }
 .checkout-mobile-step-four-option-box-right-button {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    margin: 0 0 15px 0;
+    margin: 0 0 10px 0;
+    border-bottom: 1px solid #dbdbdb;
+    padding: 0 0 10px 0;
 }
 .checkout-mobile-step-four-option-box-right-button-text {
     font-weight: 700;
@@ -968,6 +932,11 @@
 .checkout-mobile-step-four-option-box-left-button:hover,
 .checkout-mobile-step-four-option-box-right-button:hover {
     cursor: pointer;
+}
+.checkout-mobile-step-four-option-box-right-button:nth-last-child(1){
+    border-bottom: none;
+    margin: 0;
+    padding: 0;
 }
 .checkout-mobile-step-five {
     border-radius: 10px;
