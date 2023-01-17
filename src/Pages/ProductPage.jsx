@@ -132,7 +132,7 @@ class ProductPageMobile extends Component {
                         <Link to="/checkout">
                             <div className="product-mobile-cart-button">
                                 <div className="product-mobile-cart-button-icon">
-                                    <span class="material-icons">shopping_cart</span>
+                                    <span className="material-icons">shopping_cart</span>
                                 </div>
                                 <div className="product-mobile-cart-button-number">{total_units}</div>
                             </div>

@@ -609,6 +609,11 @@
     text-decoration: none;
     color: #444e5e;
 }
+.checkout-mobile-header-left {
+    display: flex;
+    align-items: center;
+    color: #444e5e;
+}
 .checkout-mobile-header-title {
     font-size: 25px;
     font-weight: bold;
@@ -621,8 +626,7 @@
     align-items: center;
     width: calc(100% - 20px);
     background-color: white;
-    padding: 20px 10px;
-    height: 100%;
+    padding: 20px 10px 80px 10px;
 }
 .checkout-mobile-table-header {
 	display: flex;
@@ -666,7 +670,7 @@
     position: relative;
 }
 .checkout-mobile-table-card-product {
-    width: 40%;
+    width: 80%;
     text-align: left;
     display: flex;
     flex-direction: row;
@@ -758,9 +762,12 @@
     font-weight: 600;
 }
 .checkout-mobile-buttons-container {
-    margin: 60px 0 0 0;
-    padding: 0 0 10px 0;
-    width: 100%;
+    background-color: white;
+    padding: 20px;
+    width: 90%;
+    z-index: 0;
+    position: fixed;
+    bottom: 0px;
 }
 .checkout-mobile-buttons-container a {
     text-decoration: unset;
@@ -774,7 +781,7 @@
     padding: 15px 10px;
     border-radius: 5px;
 }
-.checkout-mobile-empty-cart-button:hover, .checkout-mobile-button-foward:hover, .checkout-mobile-button-back:hover{
+.checkout-mobile-empty-cart-button:hover, .checkout-mobile-button-foward:hover{
     cursor: pointer;
 }
 .checkout-mobile-button-foward-text {
@@ -791,12 +798,6 @@
 .checkout-mobile-button-foward-icon .material-icons{
     color: white;
     font-size: 20px;
-}
-.checkout-mobile-button-back {
-    color: tomato;
-    margin: 10px 5px;
-    font-size: 15px;
-    text-align: center;
 }
 .checkout-mobile-step-two {
     width: 80%;
@@ -883,14 +884,6 @@
     font-size: 13px;
     font-weight: 500;
 }
-.checkout-mobile-step-three-buttons{
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 30px;
-}
 .checkout-mobile-step-four {
     border-radius: 10px;
     box-shadow: 1px 1px 10px 0px #888888;
@@ -975,14 +968,6 @@
 .checkout-mobile-step-four-option-box-left-button:hover,
 .checkout-mobile-step-four-option-box-right-button:hover {
     cursor: pointer;
-}
-.checkout-mobile-step-four-buttons{
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 30px;
 }
 .checkout-mobile-step-five {
     border-radius: 10px;
@@ -1080,13 +1065,6 @@
     font-size: 23px;
     font-weight: 600;
     text-align: right;
-}
-.checkout-mobile-step-five-buttons{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-end;
-    padding: 30px;
 }
 .checkout-mobile-step-five-summary-container {
     width: 50%;

@@ -150,7 +150,7 @@ class CheckoutDesktop extends Component {
                     </div>
                     <div className="checkout-desktop-empty-cart">
                         <div className="checkout-desktop-empty-cart-image">
-                            <span class="material-icons">shopping_cart</span>
+                            <span className="material-icons">shopping_cart</span>
                         </div>
                         <div className="checkout-desktop-empty-cart-text">Your cart is empty</div>
                         <Link to="/">
@@ -543,7 +543,7 @@ class CheckoutMobile extends Component {
                     </div>
                     <div className="checkout-mobile-empty-cart">
                         <div className="checkout-mobile-empty-cart-image">
-                            <span class="material-icons">shopping_cart</span>
+                            <span className="material-icons">shopping_cart</span>
                         </div>
                         <div className="checkout-mobile-empty-cart-text">Your cart is empty</div>
                         <Link to="/">
@@ -557,16 +557,30 @@ class CheckoutMobile extends Component {
                 <div className="checkout-mobile-background">
 
                     <div className="checkout-mobile-header">
-                        <Link to="/">
-                            <span class="material-icons">clear</span>
-                            <div className="checkout-mobile-header-icon-text">
-                                {this.state.active_step === 0 && <React.Fragment>Cart</React.Fragment>}
-                                {this.state.active_step === 1 && <React.Fragment>Any note?</React.Fragment>}
-                                {this.state.active_step === 2 && <React.Fragment>What do you prefer?</React.Fragment>}
-                                {this.state.active_step === 3 && <React.Fragment>Payment type</React.Fragment>}
-                                {this.state.active_step === 4 && <React.Fragment>Identification</React.Fragment>}
+                        {this.state.active_step === 0 &&
+                            <Link to="/">
+                                <span className="material-icons">clear</span>
+                                <div className="checkout-mobile-header-icon-text">
+                                    {this.state.active_step === 0 && <React.Fragment>Cart</React.Fragment>}
+                                </div>
+                            </Link>
+                        }
+                        {this.state.active_step !== 0 &&
+                            <div className="checkout-mobile-header-left">
+                                <span 
+                                    className="material-icons"
+                                    onClick={() => this.setState({active_step: this.state.active_step - 1})}
+                                >
+                                    arrow_back
+                                </span>
+                                <div className="checkout-mobile-header-icon-text">
+                                    {this.state.active_step === 1 && <React.Fragment>Any note?</React.Fragment>}
+                                    {this.state.active_step === 2 && <React.Fragment>What do you prefer?</React.Fragment>}
+                                    {this.state.active_step === 3 && <React.Fragment>Payment type</React.Fragment>}
+                                    {this.state.active_step === 4 && <React.Fragment>Identification</React.Fragment>}
+                                </div>
                             </div>
-                        </Link>
+                        }
                         <div className="checkout-mobile-header-title">R$ {final_value}</div>
                     </div>
                     
@@ -583,14 +597,6 @@ class CheckoutMobile extends Component {
                             <div className="checkout-mobile-table-cards-list">
                                 {this.props.products.map((product) => <ProductCardMobile data={product} {...this.props}/>)}
                             </div>
-                            <div className="checkout-mobile-buttons-container">
-                                <div onClick={() => this.setState({active_step: 1})} className="checkout-mobile-button-foward">
-                                    <div className="checkout-mobile-button-foward-text">{this.state.active_step} of 5</div>
-                                    <div className="checkout-mobile-button-foward-icon">
-                                        <span className="material-icons">arrow_forward_ios</span>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     }
                     {this.state.active_step === 1 &&
@@ -604,13 +610,6 @@ class CheckoutMobile extends Component {
                                     onChange={(event) => this.setState({notes: event.target.value})}
                                 />
                             </div>
-                            <div onClick={() => this.setState({active_step: 2})} className="checkout-mobile-button-foward">
-                                <div className="checkout-mobile-button-foward-text">{this.state.active_step} of 5</div>
-                                <div className="checkout-mobile-button-foward-icon">
-                                    <span className="material-icons">arrow_forward_ios</span>
-                                </div>
-                            </div>
-                            <div onClick={() => this.setState({active_step: 0})} className="checkout-mobile-button-back">Back</div>
                         </div>
                     }
                     {this.state.active_step === 2 &&
@@ -650,15 +649,6 @@ class CheckoutMobile extends Component {
                                     </div>
                                 </div>
                             </div>
-                            <div className="checkout-mobile-step-three-buttons">
-                                <div onClick={() => this.setState({active_step: 3})} className="checkout-mobile-button-foward">
-                                    <div className="checkout-mobile-button-foward-text">FOWARD</div>
-                                    <div className="checkout-mobile-button-foward-icon">
-                                        <span className="material-icons">arrow_forward_ios</span>
-                                    </div>
-                                </div>
-                                <div onClick={() => this.setState({active_step: 1})} className="checkout-mobile-button-back">Back</div>
-                            </div>
                         </div>
                     }
                     {this.state.active_step === 3 &&
@@ -693,15 +683,6 @@ class CheckoutMobile extends Component {
                                         <div className="checkout-mobile-step-four-option-box-right-button-text" style={this.state.payment_type === 'debit_card' ? {color: 'red'} : {}}>Credit card</div>
                                     </div>
                                 </div>
-                            </div>
-                            <div className="checkout-mobile-step-four-buttons">
-                                <div onClick={() => this.setState({active_step: 4})} className="checkout-mobile-button-foward">
-                                    <div className="checkout-mobile-button-foward-text">FOWARD</div>
-                                    <div className="checkout-mobile-button-foward-icon">
-                                        <span className="material-icons">arrow_forward_ios</span>
-                                    </div>
-                                </div>
-                                <div onClick={() => this.setState({active_step: 2})} className="checkout-mobile-button-back">Back</div>
                             </div>
                         </div>
                     }
@@ -784,17 +765,16 @@ class CheckoutMobile extends Component {
                                     }
                                 </div>
                             </div>
-                            <div className="checkout-mobile-step-five-buttons">
-                                <div className="checkout-mobile-button-foward">
-                                    <div className="checkout-mobile-button-foward-text">FOWARD</div>
-                                    <div className="checkout-mobile-button-foward-icon">
-                                        <span className="material-icons">arrow_forward_ios</span>
-                                    </div>
-                                </div>
-                                <div onClick={() => this.setState({active_step: 3})} className="checkout-mobile-button-back">Back</div>
-                            </div>
                         </div>
                     }
+                    <div className="checkout-mobile-buttons-container">
+                        <div onClick={() => this.setState({active_step: this.state.active_step + 1})} className="checkout-mobile-button-foward">
+                            <div className="checkout-mobile-button-foward-text">{this.state.active_step} of 5</div>
+                            <div className="checkout-mobile-button-foward-icon">
+                                <span className="material-icons">arrow_forward_ios</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             )
         }
