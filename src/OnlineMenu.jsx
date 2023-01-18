@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, Suspense, lazy } from 'react'
 import {
     BrowserRouter as Router,
     Switch,
@@ -7,11 +7,12 @@ import {
 import { isMobile } from 'react-device-detect';
 import Header from './components/Header';
 import MainPage from './Pages/MainPage';
-import User from './Pages/User';
-import Login from './Pages/Login';
-import ProductPage from './Pages/ProductPage';
 import Checkout from './Pages/Checkout';
 import PriceFooter from './components/PriceFooter.jsx';
+
+const User = lazy(() => import('./Pages/User'));
+const Login = lazy(() => import('./Pages/Login'));
+const ProductPage = lazy(() => import('./Pages/ProductPage'));
 
 export default class OnlineMenu extends Component {
     constructor(props){
@@ -86,36 +87,44 @@ export default class OnlineMenu extends Component {
         }
     }
 
-    render() {        
+    render() {
         return (
             <div>
                 <Router>
-                    <Header url={this.state.url} handle_change={this.handle_change}/>
-                    <Switch>
-                        <Route path="/user">
-                            <User handle_change={this.handle_change}/>
-                        </Route>
-                        <Route path="/login">
-                            <Login handle_change={this.handle_change}/>
-                        </Route>
-                        <Route path="/checkout">
-                            <Checkout products={this.state.checkout_products_list} handle_change={this.handle_change} remove_product={this.remove_product}/>
-                        </Route>
-                        <Route path="/:id" children={<ProductPage products={this.state.checkout_products_list} add_product={this.add_product} handle_change={this.handle_change}/>} />
-                        <Route path="/">
-                            <MainPage add_product={this.add_product} handle_change={this.handle_change}/>
-                        </Route>
-                    </Switch>
-                    {(this.state.is_checkout_list_empty === false && this.state.url !== '/login') && (this.state.is_checkout_list_empty === false && this.state.url !== '/checkout') &&
-                        <React.Fragment>
-                            {(isMobile && this.state.is_checkout_list_empty === false && this.state.url === '/') &&
-                                <PriceFooter products={this.state.checkout_products_list}/>
-                            }
-                            {!isMobile &&
-                                <PriceFooter products={this.state.checkout_products_list}/>
-                            }
-                        </React.Fragment>
-                    }
+                    {/* <Suspense fallback={<div>Loading...</div>}> */}
+                    <Suspense fallback={
+                        <>
+                            <div>Loading...</div>
+                            <img style={{height: 100}} src="https://en.wikipedia.org/wiki/Image#/media/File:Image_created_with_a_mobile_phone.png" alt="Loading..." />
+                        </>
+                    }>
+                        <Header url={this.state.url} handle_change={this.handle_change}/>
+                        <Switch>
+                            <Route path="/user">
+                                <User handle_change={this.handle_change}/>
+                            </Route>
+                            <Route path="/login">
+                                <Login handle_change={this.handle_change}/>
+                            </Route>
+                            <Route path="/checkout">
+                                <Checkout products={this.state.checkout_products_list} handle_change={this.handle_change} remove_product={this.remove_product}/>
+                            </Route>
+                            <Route path="/:id" children={<ProductPage products={this.state.checkout_products_list} add_product={this.add_product} handle_change={this.handle_change}/>} />
+                            <Route path="/">
+                                <MainPage add_product={this.add_product} handle_change={this.handle_change}/>
+                            </Route>
+                        </Switch>
+                        {(this.state.is_checkout_list_empty === false && this.state.url !== '/login') && (this.state.is_checkout_list_empty === false && this.state.url !== '/checkout') &&
+                            <React.Fragment>
+                                {(isMobile && this.state.is_checkout_list_empty === false && this.state.url === '/') &&
+                                    <PriceFooter products={this.state.checkout_products_list}/>
+                                }
+                                {!isMobile &&
+                                    <PriceFooter products={this.state.checkout_products_list}/>
+                                }
+                            </React.Fragment>
+                        }
+                    </Suspense>
                 </Router>
             </div>
         )
