@@ -675,81 +675,76 @@ class CheckoutMobile extends Component {
                     }
                     {this.state.active_step === 4 &&
                         <div className="checkout-mobile-step-five">
-                            <div className="checkout-mobile-step-five-header">
-                                <div className="checkout-mobile-step-five-header-price">R$ 71,53</div>
-                                <div className="checkout-mobile-step-five-header-title">Edu's Coffee</div>
-                            </div>
-                            <div className="checkout-mobile-step-five-itens-summary">
-                                <div className="checkout-mobile-step-five-itens-container">
-                                    <div className="checkout-mobile-step-five-itens-title">Your {total_units} itens:</div>
-                                    <div className="checkout-mobile-step-five-itens-details">
-                                        {this.props.products.map((product, index) => {
-                                            let photo;
-                                            if(product.product_info.image.length > 0){
-                                                Image = require('../assets/' + product.product_info.image + '.jpg');
-                                                photo = Image.default
-                                            } else {
-                                                Image = require('../assets/default_image.jpg');
-                                                photo = Image.default
-                                            }
-                                            return (
-                                                <div key={index} className="checkout-mobile-step-five-item-card">
-                                                    <div className="checkout-mobile-step-five-item-photo">
-                                                        <div className="checkout-mobile-step-five-item-amount">{product.amount}</div>
-                                                        <img src={photo} alt="" />
-                                                    </div>
-                                                    <div className="checkout-mobile-step-five-item-text">{product.product_info.title}</div>
-                                                    <div className="checkout-mobile-step-five-item-price">R$ {product.product_info.price * product.amount}</div>
+                            <div className="checkout-mobile-step-five-summary">
+                                <div className="checkout-mobile-step-five-summary-title">Your {total_units} itens:</div>
+                                <div className="checkout-mobile-step-five-summary-items">
+                                    {this.props.products.map((product, index) => {
+                                        let photo;
+                                        if(product.product_info.image.length > 0){
+                                            Image = require('../assets/' + product.product_info.image + '.jpg');
+                                            photo = Image.default
+                                        } else {
+                                            Image = require('../assets/default_image.jpg');
+                                            photo = Image.default
+                                        }
+                                        return (
+                                            <div key={index} className="checkout-mobile-step-five-summary-card">
+                                                <div className="checkout-mobile-step-five-summary-card-image">
+                                                    <div className="checkout-mobile-step-five-summary-card-image-details" style={{backgroundImage: "url('" + photo + "')"}}></div>
+                                                    <div className="checkout-mobile-step-five-summary-card-image-number">{product.amount}</div>
                                                 </div>
-                                            )
-                                        })}
-                                    </div>
-                                    <div className="checkout-mobile-step-five-itens-final-value">Final value: R$ {final_value}</div>
+                                                <div className="checkout-mobile-step-five-summary-card-details">
+                                                    <div className="checkout-mobile-step-five-summary-card-details-text">{product.product_info.title}</div>
+                                                    <div className="checkout-mobile-step-five-summary-card-details-price">R$ {product.product_info.price * product.amount}</div>
+                                                </div>
+                                            </div>
+                                        )
+                                    })}
                                 </div>
-                                <div className="checkout-mobile-step-five-summary-container">
-                                    <div className="checkout-mobile-step-five-summary-box">
-                                        <div className="checkout-mobile-step-five-summary-box-title">
-                                            <div className="checkout-mobile-step-five-summary-box-title-icon">
-                                                <span className="material-icons">attach_money</span>
-                                            </div>
-                                            <div className="checkout-mobile-step-five-summary-box-title-text">Payment method</div>
-                                        </div>
-                                        <div className="checkout-mobile-step-five-summary-box-description">
-                                            {this.state.payment_type === 'online_payment' && 'Online Payment'}
-                                            {this.state.payment_type === 'money' && 'Money'}
-                                            {this.state.payment_type === 'credit_card' && 'Credit Card'}
-                                            {this.state.payment_type === 'debit_card' && 'Debit Card'}
-                                        </div>
+                            </div>
+                            <div className="checkout-mobile-step-five-box">
+                                <div className="checkout-mobile-step-five-box-header">
+                                    <div className="checkout-mobile-step-five-box-header-title">Payment Method</div>
+                                    <div className="checkout-mobile-step-five-box-header-icon" onClick={() => this.setState({active_step: 3})}>
+                                        <div className="material-icons">edit</div>
+                                        <div className="checkout-mobile-step-five-box-header-icon-text">Edit</div>
                                     </div>
-                                    <div className="checkout-mobile-step-five-summary-box">
-                                        <div className="checkout-mobile-step-five-summary-box-title">
-                                            <div className="checkout-mobile-step-five-summary-box-title-icon">
-                                                <span className="material-icons">location_on</span>
-                                            </div>
-                                            <div className="checkout-mobile-step-five-summary-box-title-text">Deliver method</div>
-                                        </div>
-                                        <div className="checkout-mobile-step-five-summary-box-description">{this.state.radio_deliver}</div>
+                                </div>
+                                <div className="checkout-mobile-step-five-box-content">
+                                    <div className="checkout-mobile-step-five-box-content-details">
+                                        {this.state.payment_type === 'online_payment' && 'Online Payment'}
+                                        {this.state.payment_type === 'money' && 'Money'}
+                                        {this.state.payment_type === 'credit_card' && 'Credit Card'}
+                                        {this.state.payment_type === 'debit_card' && 'Debit Card'}
                                     </div>
-                                    <div className="checkout-mobile-step-five-summary-box">
-                                        <div className="checkout-mobile-step-five-summary-box-title">
-                                            <div className="checkout-mobile-step-five-summary-box-title-icon">
-                                                <span className="material-icons">person_outline</span>
-                                            </div>
-                                            <div className="checkout-mobile-step-five-summary-box-title-text">Your info</div>
-                                        </div>
-                                        <div className="checkout-mobile-step-five-summary-box-description">Celular/WhatsApp: +12345678910</div>
+                                </div>
+                            </div>
+                            <div className="checkout-mobile-step-five-box">
+                                <div className="checkout-mobile-step-five-box-header">
+                                    <div className="checkout-mobile-step-five-box-header-title">Deliver method</div>
+                                    <div className="checkout-mobile-step-five-box-header-icon" onClick={() => this.setState({active_step: 2})}>
+                                        <div className="material-icons">edit</div>
+                                        <div className="checkout-mobile-step-five-box-header-icon-text">Edit</div>
                                     </div>
-                                    {this.state.notes &&
-                                        <div className="checkout-mobile-step-five-summary-box">
-                                            <div className="checkout-mobile-step-five-summary-box-title">
-                                                <div className="checkout-mobile-step-five-summary-box-title-icon">
-                                                    <span className="material-icons">comment</span>
-                                                </div>
-                                                <div className="checkout-mobile-step-five-summary-box-title-text">Observations</div>
-                                            </div>
-                                            <div className="checkout-mobile-step-five-summary-box-description">{this.state.notes}</div>
-                                        </div>
-                                    }
+                                </div>
+                                <div className="checkout-mobile-step-five-box-content">
+                                    <div className="checkout-mobile-step-five-box-content-details">
+                                        {this.state.radio_deliver}
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="checkout-mobile-step-five-box">
+                                <div className="checkout-mobile-step-five-box-header">
+                                    <div className="checkout-mobile-step-five-box-header-title">Notes</div>
+                                    <div className="checkout-mobile-step-five-box-header-icon" onClick={() => this.setState({active_step: 1})}>
+                                        <div className="material-icons">edit</div>
+                                        <div className="checkout-mobile-step-five-box-header-icon-text">Edit</div>
+                                    </div>
+                                </div>
+                                <div className="checkout-mobile-step-five-box-content">
+                                    <div className="checkout-mobile-step-five-box-content-details">
+                                        {this.state.notes}
+                                    </div>
                                 </div>
                             </div>
                         </div>
