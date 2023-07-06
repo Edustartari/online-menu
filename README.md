@@ -1,6 +1,6 @@
 # Online menu
 
-This project is meant to learn new oportunities by programming mainly with React lib.
+This project is meant to learn new oportunities by programming mainly with React.
 
 ## Proposal
 
