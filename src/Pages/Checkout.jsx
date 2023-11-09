@@ -87,7 +87,7 @@ class ProductCardDesktop extends React.Component {
             <div key={this.props.data.code} className="checkout-desktop-table-card">
                 <div className="checkout-desktop-table-card-product">
                     <div className="checkout-desktop-table-card-product-image">
-                        <img src={product_image} alt="" />
+                        <img loading="lazy" src={product_image} alt="" />
                     </div>
                     <div className="checkout-desktop-table-card-product-title">{this.props.data.product_info.title}</div>
                 </div>
@@ -305,7 +305,7 @@ class CheckoutDesktop extends Component {
                                         <div className="checkout-desktop-step-four-option-box-left-button-text" style={this.state.payment_type === 'online_payment' ? {color: 'red'} : {}}>Online Payment</div>
                                     </div>
                                     <div className="checkout-desktop-step-four-option-box-left-image">
-                                        <img src={cards} alt="" />
+                                        <img loading="lazy" src={cards} alt="" />
                                     </div>
                                 </div>
                                 <div className="checkout-desktop-step-four-option-box-right">
@@ -358,7 +358,7 @@ class CheckoutDesktop extends Component {
                                                 <div key={index} className="checkout-desktop-step-five-item-card">
                                                     <div className="checkout-desktop-step-five-item-photo">
                                                         <div className="checkout-desktop-step-five-item-amount">{product.amount}</div>
-                                                        <img src={photo} alt="" />
+                                                        <img loading="lazy" src={photo} alt="" />
                                                     </div>
                                                     <div className="checkout-desktop-step-five-item-text">{product.product_info.title}</div>
                                                     <div className="checkout-desktop-step-five-item-price">R$ {product.product_info.price * product.amount}</div>
@@ -498,7 +498,7 @@ class ProductCardMobile extends React.Component {
             <div key={this.props.data.code} className="checkout-mobile-table-card">
                 <div className="checkout-mobile-table-card-product">
                     <div className="checkout-mobile-table-card-product-image">
-                        <img src={product_image} alt="" />
+                        <img loading="lazy" src={product_image} alt="" />
                         <div className="checkout-mobile-table-card-product-image-total">{this.props.data.amount}</div>
                     </div>
                     <div className="checkout-mobile-table-card-product-title">{this.props.data.product_info.title}</div>
@@ -652,7 +652,7 @@ class CheckoutMobile extends Component {
                                         <div className="checkout-mobile-step-four-option-box-left-button-text" style={this.state.payment_type === 'online_payment' ? {color: 'red'} : {}}>Online Payment</div>
                                     </div>
                                     <div className="checkout-mobile-step-four-option-box-left-image">
-                                        <img src={cards} alt="" />
+                                        <img loading="lazy" src={cards} alt="" />
                                     </div>
                                 </div>
                                 <div className="checkout-mobile-step-four-option-box-right">

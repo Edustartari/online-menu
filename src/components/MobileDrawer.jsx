@@ -41,7 +41,7 @@ export default function MobileDrawer() {
                     <div className="drawer-mobile-bottom-options">
                         <div className="drawer-mobile-bottom-options-item">
                             <div className="drawer-mobile-bottom-options-icon">
-                                <img src={whatsapp_icon} alt="" />
+                                <img src={whatsapp_icon} alt="" loading="lazy"/>
                             </div>
                             <div className="drawer-mobile-bottom-options-info">55 48 90000 0000</div>
                         </div>

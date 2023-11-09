@@ -49,7 +49,7 @@ class LoginDesktop extends Component {
                         <div className="login-desktop-buttons-container">
                             <div className="login-desktop-button">
                                 <div className="login-desktop-button-icon">
-                                    <img src={google_icon} alt="" />
+                                    <img loading="lazy" src={google_icon} alt="" />
                                 </div>
                                 <div className="login-desktop-button-text">Google</div>
                             </div>
@@ -72,7 +72,7 @@ class LoginDesktop extends Component {
                                     // <button onClick={renderProps.onClick}>This is my custom FB button</button>
                                     <div className="login-desktop-button" onClick={() => renderProps.onClick()}>
                                         <div className="login-desktop-button-icon">
-                                            <img src={facebook_icon} alt="" />
+                                            <img loading="lazy" src={facebook_icon} alt="" />
                                         </div>
                                         <div className="login-desktop-button-text">Facebook</div>
                                     </div>
@@ -80,7 +80,7 @@ class LoginDesktop extends Component {
                             />
                             {/* <div className="login-desktop-button" onClick={() => {this.response_fb_login()}}>
                                 <div className="login-desktop-button-icon">
-                                    <img src={facebook_icon} alt="" />
+                                    <img loading="lazy" src={facebook_icon} alt="" />
                                 </div>
                                 <div className="login-desktop-button-text">Facebook</div>
                             </div> */}
@@ -115,13 +115,13 @@ class LoginMobile extends Component {
                     <div className="login-mobile-buttons-container">
                         <div className="login-mobile-button">
                             <div className="login-mobile-button-icon">
-                                <img src={google_icon} alt="" />
+                                <img loading="lazy" src={google_icon} alt="" />
                             </div>
                             <div className="login-mobile-button-text">Google</div>
                         </div>
                         <div className="login-mobile-button">
                             <div className="login-mobile-button-icon">
-                                <img src={facebook_icon} alt="" />
+                                <img loading="lazy" src={facebook_icon} alt="" />
                             </div>
                             <div className="login-mobile-button-text">Facebook</div>
                         </div>

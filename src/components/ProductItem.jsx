@@ -33,7 +33,7 @@ class ProductItemDesktop extends Component {
                                 <div className="product-item-desktop-grid-img">
                                     <div className="product-item-desktop-grid-opacity"></div>
                                     {Image !== null &&
-                                        <img src={Image.default} alt="" />
+                                        <img loading="lazy" src={Image.default} alt="" />
                                     }
                                 </div>
                                 <div className="product-item-desktop-grid-content">
@@ -72,7 +72,7 @@ class ProductItemDesktop extends Component {
                                 <div className="product-item-desktop-list-img">
                                     <div className="product-item-desktop-list-opacity"></div>
                                     {Image !== null &&
-                                        <img src={Image.default} alt="" />
+                                        <img loading="lazy" src={Image.default} alt="" />
                                     }
                                 </div>
                                 <div className="product-item-desktop-list-content">
@@ -134,7 +134,7 @@ class ProductItemMobile extends Component {
                             <div className="product-item-mobile-grid">
                                 <div className="product-item-mobile-grid-img">
                                     {Image !== null &&
-                                        <img src={Image.default} alt="" />
+                                        <img loading="lazy" src={Image.default} alt="" />
                                     }
                                 </div>
                                 <div className="product-item-mobile-grid-content">
@@ -171,7 +171,7 @@ class ProductItemMobile extends Component {
                             <div className="product-item-mobile-list">
                                 <div className="product-item-mobile-list-img">
                                     {Image !== null &&
-                                        <img src={Image.default} alt="" />
+                                        <img loading="lazy" src={Image.default} alt="" />
                                     }
                                     <div 
                                         onClick={(event) => {this.props.add_product(product); event.preventDefault()}} 

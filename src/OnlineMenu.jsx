@@ -95,7 +95,7 @@ export default class OnlineMenu extends Component {
                     <Suspense fallback={
                         <>
                             <div>Loading...</div>
-                            <img style={{height: 100}} src="https://en.wikipedia.org/wiki/Image#/media/File:Image_created_with_a_mobile_phone.png" alt="Loading..." />
+                            <img style={{height: 100}} src="https://en.wikipedia.org/wiki/Image#/media/File:Image_created_with_a_mobile_phone.png" alt="Loading..." loading="lazy"/>
                         </>
                     }>
                         <Header url={this.state.url} handle_change={this.handle_change}/>

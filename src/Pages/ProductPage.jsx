@@ -34,7 +34,7 @@ class ProductPageDesktop extends Component {
         return (
             <div className="product-desktop-main-container">
                 <div className="product-desktop-image">
-                    <img src={product_image} alt="" />
+                    <img loading="lazy" src={product_image} alt="" />
                 </div>
                 <div className="product-desktop-info">
                     <div className="product-desktop-header">
@@ -46,11 +46,11 @@ class ProductPageDesktop extends Component {
                     <div className="product-desktop-price">R$ {product.price}</div>
                     <div className="product-desktop-payment">
                         <div className="product-desktop-payment-cards">
-                            <img src={cards} alt="" />
+                            <img loading="lazy" src={cards} alt="" />
                         </div>
                         <div className="product-desktop-payment-market">
                             <div className="product-desktop-payment-market-text">Processed by</div>
-                            <img src={paid_market} alt="" />
+                            <img loading="lazy" src={paid_market} alt="" />
                         </div>
                     </div>
                     <div className="product-desktop-description">{product.description}</div>
@@ -62,7 +62,7 @@ class ProductPageDesktop extends Component {
                             </div>
                         </div>
                         <div className="product-desktop-whatsapp-button">
-                            <img src={whatsapp_icon} alt="" />
+                            <img loading="lazy" src={whatsapp_icon} alt="" />
                             <div className="product-desktop-whatsapp-button-text">Order by Whatsapp</div>
                         </div>
                     </div>
@@ -102,7 +102,7 @@ class ProductPageMobile extends Component {
         return (
             <div className="product-mobile-main-container">
                 <div className="product-mobile-image">
-                    <img src={product_image} alt="" />
+                    <img loading="lazy" src={product_image} alt="" />
                 </div>
                 <div className="product-mobile-info">
                     <div className="product-mobile-header">
@@ -114,16 +114,16 @@ class ProductPageMobile extends Component {
                     <div className="product-mobile-price">R$ {product.price}</div>
                     <div className="product-mobile-payment">
                         <div className="product-mobile-payment-cards">
-                            <img src={cards} alt="" />
+                            <img loading="lazy" src={cards} alt="" />
                         </div>
                         <div className="product-mobile-payment-market">
                             <div className="product-mobile-payment-whatsapp-button">
                                 <div className="product-mobile-payment-whatsapp-text">Order by</div>
-                                <img src={whatsapp_icon} alt="" />
+                                <img loading="lazy" src={whatsapp_icon} alt="" />
                             </div>
                             <div className="product-mobile-payment-market-column">
                                 <div className="product-mobile-payment-market-text">Processed by</div>
-                                <img src={paid_market} alt="" />
+                                <img loading="lazy" src={paid_market} alt="" />
                             </div>
                         </div>
                     </div>
