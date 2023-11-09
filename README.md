@@ -1,5 +1,4 @@
-Checkout the website here:
-https://online-coffee.on.fleek.co/
+# Checkout here: https://online-coffee.on.fleek.co/
 
 # Online menu
 
