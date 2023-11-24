@@ -1,5 +1,10 @@
 # Checkout here: https://online-coffee.on.fleek.co/
 
+![Screenshot from 2023-11-23 22-45-21](https://github.com/Edustartari/online-menu/assets/47463985/08402d6d-8dc6-4df6-829d-d8e3fb9d4ef0)
+
+![Screenshot from 2023-11-23 22-45-44](https://github.com/Edustartari/online-menu/assets/47463985/d42bc846-e827-470b-bcb9-548f5efaa780)
+
+
 # Online menu
 
 This project is meant to learn new oportunities by programming mainly with React.
