@@ -3,6 +3,7 @@ import { isMobile } from 'react-device-detect';
 import '../../styles/ProductItem.css';
 import Image from 'next/image'
 import AddIcon from '@mui/icons-material/Add';
+import StarIcon from '@mui/icons-material/Star';
 import { useStore } from '../layout';
 import Link from 'next/link';
 
@@ -13,37 +14,22 @@ function ProductItemDesktop ({ display_mode, ...props }) {
     const [hover, setHover] = useState(false);
 
     const product = props.product;
-    console.log('')
-    console.log('ProductItemDesktop')
-    console.log(product)
-
-    // var product_image;
-        // if(product.image.length > 0){
-        //     Image = require('./../assets/' + product.image + '.jpg');
-        //     product_image = Image.default
-        // } else {
-        //     Image = require('./../assets/default_image.jpg');
-        //     product_image = Image.default
-        // }
 
     return (
         <React.Fragment>
             {display_mode === 'grid' &&
                 <div className="product-item-desktop-grid-container">
-                    <Link href={"/" + product.code}>
+                    <Link href={"/product-page/" + product.code}>
                         <div className="product-item-desktop-grid" onMouseOver={() => setHover(true)} onMouseLeave={() => setHover(false)}>
                             <div className="product-item-desktop-grid-img">
                                 <div className="product-item-desktop-grid-opacity"></div>
-                                {/* {Image !== null &&
-                                    <img loading="lazy" src={Image.default} alt="" />
-                                } */}
-                                <Image src={'/' + product.image + '.jpg'} width={310} height={310} alt="" />
+                                <Image src={'/' + (product.image ? product.image : 'default_image') + '.jpg'} width={310} height={310} alt="" />
                             </div>
                             <div className="product-item-desktop-grid-content">
                                 <div className="product-item-desktop-grid-title">
                                     {product.is_highlight &&
                                         <div className="product-item-desktop-grid-title-favorite">
-                                            <span className="material-icons">star</span>
+                                            <StarIcon/>
                                         </div>
                                     }
                                     <div className="product-item-desktop-grid-title-text">{product.title}</div>
@@ -70,19 +56,17 @@ function ProductItemDesktop ({ display_mode, ...props }) {
             }
             {display_mode === 'list' &&
                 <div className="product-item-desktop-list-container">
-                    <Link to={"/" + product.code}>
+                    <Link href={"/product-page/" + product.code}>
                         <div className="product-item-desktop-list" onMouseOver={() => setHover(true)} onMouseLeave={() => setHover(false)}>
                             <div className="product-item-desktop-list-img">
                                 <div className="product-item-desktop-list-opacity"></div>
-                                {Image !== null &&
-                                    <img loading="lazy" src={Image.default} alt="" />
-                                }
+                                <Image src={'/' + (product.image ? product.image : 'default_image') + '.jpg'} width={310} height={310} alt="" />
                             </div>
                             <div className="product-item-desktop-list-content">
                                 <div className="product-item-desktop-list-title">
                                     {product.is_highlight &&
                                         <div className="product-item-desktop-list-title-favorite">
-                                            <span className="material-icons">star</span>
+                                            <StarIcon/>
                                         </div>
                                     }
                                     <div className="product-item-desktop-list-title-text">{product.title}</div>
@@ -100,7 +84,7 @@ function ProductItemDesktop ({ display_mode, ...props }) {
                                     className="product-item-desktop-list-button" 
                                     style={hover ? {display: 'flex'} : {display: 'none'}}
                                 >
-                                    <span className="material-icons">add</span>
+                                    <span className="material-icons"><AddIcon/></span>
                                 </div>
                             </div>
                         </div>
@@ -114,31 +98,20 @@ function ProductItemDesktop ({ display_mode, ...props }) {
 function ProductItemMobile(props) {
     const product = props.product;
 
-    var product_image;
-    // if(product.image.length > 0){
-    //     Image = require('./../assets/' + product.image + '.jpg');
-    //         product_image = Image.default
-    //     } else {
-    //         Image = require('./../assets/default_image.jpg');
-    //         product_image = Image.default
-    //     }
-
     return (
         <React.Fragment>
             {display_mode === 'grid' &&
                 <div className="product-item-mobile-grid-container">
-                    <Link to={"/" + product.code}>
+                    <Link href={"/product-page/" + product.code}>
                         <div className="product-item-mobile-grid">
                             <div className="product-item-mobile-grid-img">
-                                {Image !== null &&
-                                    <img loading="lazy" src={Image.default} alt="" />
-                                }
+                                <Image src={'/' + (product.image ? product.image : 'default_image') + '.jpg'} width={310} height={310} alt="" />
                             </div>
                             <div className="product-item-mobile-grid-content">
                                 <div className="product-item-mobile-grid-title">
                                     {product.is_highlight &&
                                         <div className="product-item-mobile-grid-title-favorite">
-                                            <span className="material-icons">star</span>
+                                            <StarIcon/>
                                         </div>
                                     }
                                     <div className="product-item-mobile-grid-title-text">{product.title}</div>
@@ -155,7 +128,7 @@ function ProductItemMobile(props) {
                                     onClick={(event) => {add_product(product); event.preventDefault()}} 
                                     className="product-item-mobile-grid-button" 
                                 >
-                                    <span className="material-icons">add</span>
+                                    <span className="material-icons"><AddIcon/></span>
                                 </div>
                             </div>
                         </div>
@@ -164,24 +137,22 @@ function ProductItemMobile(props) {
             }
             {display_mode === 'list' &&
                 <div className="product-item-mobile-list-container">
-                    <Link to={"/" + product.code}>
+                    <Link href={"/product-page/" + product.code}>
                         <div className="product-item-mobile-list">
                             <div className="product-item-mobile-list-img">
-                                {Image !== null &&
-                                    <img loading="lazy" src={Image.default} alt="" />
-                                }
+                                <Image src={'/' + (product.image ? product.image : 'default_image') + '.jpg'} width={310} height={310} alt="" />
                                 <div 
                                     onClick={(event) => {add_product(product); event.preventDefault()}} 
                                     className="product-item-mobile-list-button" 
                                 >
-                                    <span className="material-icons">add</span>
+                                    <span className="material-icons"><AddIcon/></span>
                                 </div>
                             </div>
                             <div className="product-item-mobile-list-content">
                                 <div className="product-item-mobile-list-title">
                                     {product.is_highlight &&
                                         <div className="product-item-mobile-list-title-favorite">
-                                            <span className="material-icons">star</span>
+                                            <StarIcon/>
                                         </div>
                                     }
                                     <div className="product-item-mobile-list-title-text">{product.title}</div>

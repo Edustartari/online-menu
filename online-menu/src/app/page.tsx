@@ -2,8 +2,8 @@
 import React, { useState } from 'react';
 import Image from "next/image";
 import "../styles/page.css";
+import '../styles/MainPage.css';
 import { isMobile } from 'react-device-detect';
-// import styles from "./page.module.css";
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 
@@ -19,7 +19,6 @@ import EmailIcon from '@mui/icons-material/Email';
 import TagIcon from '@mui/icons-material/Tag';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 
-import '../styles/MainPage.css';
 import ProductItem from './_components/ProductItem.jsx';
 import products_list from './products.json';
 

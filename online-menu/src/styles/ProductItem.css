@@ -23,8 +23,8 @@
 }
 .product-item-desktop-grid-img img{
     width: 100%;
-    border-radius: 10px;
     display: flex;
+    object-fit: cover;
 }
 .product-item-desktop-grid-content{
     padding: 20px;
