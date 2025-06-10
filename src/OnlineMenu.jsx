@@ -28,15 +28,11 @@ export default class OnlineMenu extends Component {
     }
 
     handle_change(key, value){
-        console.log('handle_change')
         this.state[key] = value
         this.setState({[key]: value})
-        console.log(this.state[key])
     }
 
     add_product(product){
-        console.log('')
-        console.log('add_product')
         let temporary_list = [...this.state.checkout_products_list]
 
         if(this.state.is_checkout_list_empty){
@@ -68,8 +64,6 @@ export default class OnlineMenu extends Component {
     }
 
     remove_product(product){
-        console.log('')
-        console.log('remove product')
         let new_list;
         if(product === 'all'){
             new_list = []

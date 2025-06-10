@@ -1,0 +1,339 @@
+/**************************************/
+/*************  DESKTOP  **************/
+/**************************************/
+
+.product-desktop-main-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 30px 10%;
+}
+.product-desktop-image {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+}
+.product-desktop-image img{
+    width: 70%;
+    border-radius: 10px;
+    min-height: 200px;
+}
+.product-desktop-info {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    height: 100%;
+    width: 700px;
+}
+.product-desktop-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.product-desktop-header-text {
+    font-size: 12px;
+    color: gray;
+    margin: 0 10px 0 0;
+}
+.product-desktop-header-separator{
+    height: 5px;
+    width: 5px;
+    background-color: gray;
+    margin: 0 10px 0 0;
+    border-radius: 10px;
+}
+.product-desktop-title {
+    font-weight: bold;
+    font-size: 25px;
+    margin: 10px 0;
+}
+.product-desktop-price {
+    font-weight: bold;
+    font-size: 17px;
+    color: #ff4e4e;
+}
+.product-desktop-payment {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0 0 0;
+}
+.product-desktop-payment-cards{
+
+}
+.product-desktop-payment-cards img{
+    width: 200px;
+}
+.product-desktop-payment-market{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.product-desktop-payment-market img{
+    width: 70px;
+}
+.product-desktop-payment-market-text{
+    font-size: 10px;
+    margin: 0 8px 0 0;
+}
+.product-desktop-description {
+    font-weight: 500;
+    margin: 20px 0 70px 0;
+    border-top: 1px solid lightgray;
+    padding: 15px 0 0 0;
+}
+.product-desktop-buttons {
+    border-top: 1px solid lightgray;
+    padding: 15px 0 0 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.product-desktop-add-button {
+    height: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: indianred;
+    color: white;
+    padding: 15px 0px;
+    border-radius: 5px;
+    margin: 0 20px 0 0;
+    width: 50%;
+}
+.product-desktop-add-button:hover{
+    cursor: pointer;
+}
+.product-desktop-add-button-text {
+    font-weight: bold;
+    margin: 0 0 0 30px;
+}
+.product-desktop-add-button-icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 30px 0 0px;
+}
+.product-desktop-add-button-icon .material-icons{
+
+}
+.product-desktop-whatsapp-button {
+    height: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    padding: 15px 0px;
+    background-color: lightgray;
+    border-radius: 5px;
+}
+.product-desktop-whatsapp-button:hover{
+    cursor: pointer;
+}
+.product-desktop-whatsapp-button img {
+    height: 25px;
+    margin: 0 0 0 30px;
+}
+.product-desktop-whatsapp-button-text {
+    margin: 0 30px 0 10px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+
+/**************************************/
+/*************  MOBILE  **************/
+/**************************************/
+
+.product-mobile-main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 15px;
+}
+.product-mobile-image {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.product-mobile-image img{
+    width: 100%;
+    border-radius: 10px;
+}
+.product-mobile-info {
+    margin: 20px 0 0 0;
+    width: 100%;
+}
+.product-mobile-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.product-mobile-header-text {
+    font-size: 12px;
+    color: gray;
+    margin: 0 10px 0 0;
+}
+.product-mobile-header-separator{
+    height: 5px;
+    width: 5px;
+    background-color: gray;
+    margin: 0 10px 0 0;
+    border-radius: 10px;
+}
+.product-mobile-title {
+    font-weight: bold;
+    font-size: 25px;
+    margin: 10px 0;
+}
+.product-mobile-price {
+    font-weight: bold;
+    font-size: 20px;
+    color: #ff4e4e;
+}
+.product-mobile-payment {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0 0 0;
+}
+.product-mobile-payment-cards{
+
+}
+.product-mobile-payment-cards img{
+    width: 200px;
+}
+.product-mobile-payment-whatsapp-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0px 8px 0;
+    padding: 3px 5px 3px 5px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+.product-mobile-payment-whatsapp-button img{
+    width: 20px;
+}
+.product-mobile-payment-whatsapp-text {
+    font-weight: 600;
+    margin: 0 8px 0 0;
+    font-size: 15px;
+}
+.product-mobile-payment-market-column {
+
+}
+.product-mobile-payment-market{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.product-mobile-payment-market-column img{
+    width: 70px;
+}
+.product-mobile-payment-market-text{
+    font-size: 10px;
+    margin: 0 8px 0 0;
+}
+.product-mobile-description {
+    font-weight: 500;
+    margin: 20px 0 120px 0;
+    border-top: 1px solid lightgray;
+    padding: 15px 0 0 0;
+}
+.product-mobile-buttons {
+    padding: 15px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: calc(100% - 30px);
+    position: fixed;
+    bottom: 0px;
+    background-color: white;
+}
+.product-mobile-buttons a {
+    text-decoration: none;
+}
+.product-mobile-cart-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #e9a1a1;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 0 15px 0 0;
+    position: relative;
+}
+.product-mobile-cart-button-icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.product-mobile-cart-button-number {
+    position: absolute;
+    background-color: gray;
+    display: flex;
+    padding: 0px 7px 2px 7px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    top: -9px;
+    right: -5px;
+    border: 1px solid white;
+}
+.product-mobile-add-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: indianred;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    width: 100%;
+    box-shadow: 2px 2px gray;
+}
+.product-mobile-add-button:active {
+    position: relative;
+    bottom: -2px;
+    right: -2px;
+    background-color: rgb(218, 117, 117);
+}
+.product-mobile-add-button-text {
+    font-weight: bold;
+    margin: 0 30px;
+}
+.product-mobile-add-button-icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.product-mobile-add-button-icon .material-icons{
+
+}
+.product-mobile-add-button-price {
+    margin: 0 0 0 10px;
+}
+

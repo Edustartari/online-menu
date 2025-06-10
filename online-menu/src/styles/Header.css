@@ -1,0 +1,183 @@
+/***************************************/
+/*************  DESKTOP  **************/
+/**************************************/
+
+.header-desktop-home-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    border-bottom: 2px solid #eaeaea;
+}
+.header-desktop-home-search {
+
+}
+.header-desktop-home-search-icon {
+
+}
+.header-desktop-home-search-input {
+
+}
+.header-desktop-home-title {
+    color: #ff4e4e;
+    font-size: 21px;
+    font-weight: bold;
+}
+.header-desktop-home-profile {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.header-desktop-home-profile-login {
+    font-size: 10px;
+    margin: 0 10px 0 0;
+    font-weight: bold;
+}
+.header-desktop-home-profile-icon {
+
+}
+.header-desktop-home-container a{
+    text-decoration: unset;
+    color: unset;
+}
+.header-desktop-login-container {
+    padding: 30px 10%;
+    background-color: #f5f5f5;
+}
+.header-desktop-login-container a {
+    text-decoration: unset;
+    color: black;
+}
+.header-desktop-login-button {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+}
+.header-desktop-login-button-icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.header-desktop-login-button-icon .material-icons{
+    font-size: 20px;
+}
+.header-desktop-login-button-text {
+	font-size: 14px;
+	font-weight: 500;
+}
+
+
+
+/**************************************/
+/*************  MOBILE  **************/
+/**************************************/
+
+.header-mobile-home-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 2px solid #eaeaea;
+}
+.header-mobile-home-search {
+
+}
+.header-mobile-home-search-icon {
+
+}
+.header-mobile-home-search-input {
+
+}
+.header-mobile-home-title {
+    color: #ff4e4e;
+    font-size: 21px;
+    font-weight: bold;
+}
+.header-mobile-home-profile {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.header-mobile-home-profile-login {
+    font-size: 10px;
+    margin: 0 10px 0 0;
+    font-weight: bold;
+}
+.header-mobile-home-profile-icon {
+
+}
+.header-mobile-home-container a{
+    text-decoration: unset;
+    color: unset;
+}
+.header-mobile-login-container {
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+.header-mobile-login-container a {
+    text-decoration: unset;
+    color: black;
+}
+.header-mobile-login-button {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+}
+.header-mobile-login-button-icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.header-mobile-login-button-icon .material-icons{
+    font-size: 28px;
+}
+.header-mobile-general-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #eaeaea;
+    padding: 20px;
+    background-color: white;
+}
+.header-mobile-general-container a {
+    text-decoration: unset;
+    color: black;
+}
+.header-mobile-general-button {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+}
+.header-mobile-general-button-icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.header-mobile-general-button-icon .material-icons{
+    font-size: 20px;
+}
+.header-mobile-home-profile-general {
+    margin: 0 9px 0 0;
+    font-size: 12px;
+    font-weight: bold;
+}
+.header-mobile-home-profile-general-icon{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.header-mobile-home-profile-general-icon .material-icons{
+
+}
