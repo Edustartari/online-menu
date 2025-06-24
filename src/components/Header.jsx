@@ -17,7 +17,6 @@ class HeaderDesktop extends Component {
         let pathname = window.location.pathname;
         console.log('')
         console.log('Header')
-        console.log(this.props.url)
 
         if(this.props.url === '/login'){
             return(
