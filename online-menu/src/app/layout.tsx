@@ -38,7 +38,6 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
 
-  const checkout_products_list = useStore((state: any) => state.checkout_products_list);
   const is_checkout_list_empty = useStore((state: any) => state.is_checkout_list_empty);
 
   const pathname = window.location.pathname;
@@ -51,10 +50,10 @@ export default function RootLayout({
         {(is_checkout_list_empty === false && pathname !== '/login') && (is_checkout_list_empty === false && pathname !== '/checkout') &&
           <React.Fragment>
             {(isMobile && is_checkout_list_empty === false && pathname === '/') &&
-              <PriceFooter products={checkout_products_list}/>
+              <PriceFooter/>
             }
             {!isMobile &&
-              <PriceFooter products={checkout_products_list}/>
+              <PriceFooter/>
             }
           </React.Fragment>
         }

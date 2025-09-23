@@ -23,20 +23,21 @@ import ProductItem from './_components/ProductItem.jsx';
 import products_list from './products.json';
 
 import { useStore } from './_stores/main';
+import { Product } from './_types';
 
 function MainPageDesktop() {
 
   const add_product = useStore((state) => state.add_product);
   const checkout_products_list = useStore((state: any) => state.checkout_products_list);
 
-  const [category, setCategory] = useState('All');
-  const [sort_by, setSortBy] = useState('category');
-  const [display_mode, setDisplayMode] = useState('grid'); // grid, list
-  const [original_products_list, setOriginalProductsList] = useState(products_list.products);
-  const [filtered_products_list, setFilteredProductsList] = useState(products_list.products);
+  const [category, setCategory] = useState<string>('All');
+  const [sort_by, setSortBy] = useState<string>('category');
+  const [display_mode, setDisplayMode] = useState<string>('grid'); // grid, list
+  const [original_products_list, setOriginalProductsList] = useState<Product[]>(products_list.products);
+  const [filtered_products_list, setFilteredProductsList] = useState<Product[]>(products_list.products);
 
-  const sort_list = (list, value) => {
-    let sortedObjs;
+  const sort_list = (list: Product[], value: string) => {
+    let sortedObjs = [] as Product[];
     if (value === 'category') {
       sortedObjs = list.sort((a, b) => a.category.localeCompare(b.category));
     } else if (value === 'lowest_price') {
@@ -51,7 +52,7 @@ function MainPageDesktop() {
     setFilteredProductsList(sortedObjs);
   }
 
-  const menu_select = (option, value) => {
+  const menu_select = (option: string, value: string) => {
     if (option === 'category') {
       setCategory(value);
     } else if (option === 'sort_by') {

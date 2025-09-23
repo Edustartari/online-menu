@@ -4,9 +4,14 @@ import '../../styles/PriceFooter.css';
 import Link from 'next/link';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import { useStore } from '../_stores/main';
+import { Product } from '../_types';
 
-const PriceFooterDesktop = (props) => {
-  let prices_list = props.products.map((item) => item.product_info.price * item.amount);
+const PriceFooterDesktop = () => {
+
+  const checkout_products_list = useStore((state: any) => state.checkout_products_list);
+
+  let prices_list = checkout_products_list.map((item: Product) => item.product_info.price * item.amount);
   let total = prices_list.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
   return (
     <div className="price-footer-desktop-container">
@@ -22,11 +27,14 @@ const PriceFooterDesktop = (props) => {
   )
 }
 
-const PriceFooterMobile = (props) => {
-  let prices_list = props.products.map((item) => item.product_info.price * item.amount);
+const PriceFooterMobile = () => {
+  
+  const checkout_products_list = useStore((state: any) => state.checkout_products_list);
+
+  let prices_list = checkout_products_list.map((item) => item.product_info.price * item.amount);
   let total = prices_list.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
 
-  let total_units = props.products.map((item) => item.amount);
+  let total_units = checkout_products_list.map((item) => item.amount);
   total_units = total_units.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
 
   return (
