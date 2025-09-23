@@ -1,12 +1,5 @@
 import { create } from 'zustand'
 
-// const useBear = create((set) => ({
-//   bears: 0,
-//   increasePopulation: () => set((state) => ({ bears: state.bears + 1 })),
-//   removeAllBears: () => set({ bears: 0 }),
-//   updateBears: (newBears) => set({ bears: newBears }),
-// }))
-
 type StoreState = {
   checkout_products_list: any[];
   is_checkout_list_empty: boolean;
