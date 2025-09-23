@@ -115,10 +115,10 @@
     background-color: rgba(0,0,0,0.1);
 }
 .product-item-desktop-list-img img{
-    width: 100%;
     border-radius: 10px;
     display: flex;
     width: 310px;
+    object-fit: cover;
 }
 .product-item-desktop-list-content{
     padding: 20px;

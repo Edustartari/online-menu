@@ -22,11 +22,12 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import ProductItem from './_components/ProductItem.jsx';
 import products_list from './products.json';
 
-import { useStore } from './layout';
+import { useStore } from './_stores/main';
 
 function MainPageDesktop() {
 
-  const { add_product } = useStore()
+  const add_product = useStore((state) => state.add_product);
+  const checkout_products_list = useStore((state: any) => state.checkout_products_list);
 
   const [category, setCategory] = useState('All');
   const [sort_by, setSortBy] = useState('category');

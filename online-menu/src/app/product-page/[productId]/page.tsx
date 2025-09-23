@@ -8,8 +8,12 @@ import whatsapp_icon from '../../../../public/whatsapp_icon.png';
 import products_list from '../../products.json';
 import Link from 'next/link';
 import Image from 'next/image'
+import { useStore } from '../../_stores/main';
 
 const ProductPageDesktop = (props) => {
+
+    const add_product = useStore((state) => state.add_product);
+
     const pathname = window.location.pathname;
     const [product, setProduct] = React.useState(null);
     useEffect(() => {
@@ -48,7 +52,7 @@ const ProductPageDesktop = (props) => {
                 </div>
                 <div className="product-desktop-description">{product.description}</div>
                 <div className="product-desktop-buttons">
-                    <div className="product-desktop-add-button" onClick={(event) => {this.props.add_product(product); event.stopPropagation()}}>
+                    <div className="product-desktop-add-button" onClick={(event) => {add_product(product); event.stopPropagation()}}>
                         <div className="product-desktop-add-button-text">Add item</div>
                         <div className="product-desktop-add-button-icon">
                             <span className="material-icons">add</span>
@@ -66,6 +70,8 @@ const ProductPageDesktop = (props) => {
 
 
 const ProductPageMobile = (props) => {
+    const add_product = useStore((state) => state.add_product);
+
     let pathname = window.location.pathname;
     
     var total_units = this.props.products.map((item) =>item.amount);
@@ -124,7 +130,7 @@ const ProductPageMobile = (props) => {
                             <div className="product-mobile-cart-button-number">{total_units}</div>
                         </div>
                     </Link>
-                    <div className="product-mobile-add-button" onClick={(event) => {this.props.add_product(product); event.stopPropagation()}}>
+                    <div className="product-mobile-add-button" onClick={(event) => {add_product(product); event.stopPropagation()}}>
                         <div className="product-mobile-add-button-price">R$ {product.price}</div>
                         <div className="product-mobile-add-button-text">Add item</div>
                         <div className="product-mobile-add-button-icon">

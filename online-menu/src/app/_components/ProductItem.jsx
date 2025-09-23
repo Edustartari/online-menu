@@ -4,12 +4,11 @@ import '../../styles/ProductItem.css';
 import Image from 'next/image'
 import AddIcon from '@mui/icons-material/Add';
 import StarIcon from '@mui/icons-material/Star';
-import { useStore } from '../layout';
+import { useStore } from '../_stores/main';
 import Link from 'next/link';
 
 function ProductItemDesktop ({ display_mode, ...props }) {
-    const { add_product } = useStore()
-
+    const add_product = useStore((state) => state.add_product);
 
     const [hover, setHover] = useState(false);
 
@@ -43,7 +42,7 @@ function ProductItemDesktop ({ display_mode, ...props }) {
                                     {product.description}
                                 </div>
                                 <div 
-                                    onClick={(event) => {add_product(product); event.preventDefault()}} 
+                                    onClick={(event) => {event.preventDefault(), event.stopPropagation(), add_product(product)}} 
                                     className="product-item-desktop-grid-button" 
                                     style={hover ? {display: 'flex'} : {display: 'none'}}
                                 >
@@ -96,6 +95,8 @@ function ProductItemDesktop ({ display_mode, ...props }) {
 }
 
 function ProductItemMobile(props) {
+    const add_product = useStore((state) => state.add_product);
+
     const product = props.product;
 
     return (
