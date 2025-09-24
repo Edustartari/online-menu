@@ -10,7 +10,7 @@ import Link from 'next/link';
 function ProductItemDesktop({ display_mode, ...props }) {
   const add_product = useStore((state) => state.add_product);
 
-  const [hover, setHover] = useState<boolean>(false);
+  const [hover, setHover] = useState(false);
 
   const product = props.product;
 

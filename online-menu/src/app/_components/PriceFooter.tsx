@@ -5,14 +5,15 @@ import Link from 'next/link';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { useStore } from '../_stores/main';
-import { Product } from '../_types';
+import { ICheckoutItem } from '../_types';
 
 const PriceFooterDesktop = () => {
 
   const checkout_products_list = useStore((state: any) => state.checkout_products_list);
 
-  let prices_list = checkout_products_list.map((item: Product) => item.product_info.price * item.amount);
-  let total = prices_list.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+  let prices_list = checkout_products_list.map((item: ICheckoutItem) => item.product_info.price * item.amount);
+  let total: number = prices_list.reduce((accumulator: number, currentValue: number) => accumulator + currentValue, 0);
+
   return (
     <div className="price-footer-desktop-container">
       <Link href="/checkout">

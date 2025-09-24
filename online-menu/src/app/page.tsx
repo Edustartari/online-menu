@@ -23,7 +23,7 @@ import ProductItem from './_components/ProductItem.jsx';
 import products_list from './products.json';
 
 import { useStore } from './_stores/main';
-import { Product } from './_types';
+import { IProduct } from './_types';
 
 function MainPageDesktop() {
 
@@ -33,11 +33,11 @@ function MainPageDesktop() {
   const [category, setCategory] = useState<string>('All');
   const [sort_by, setSortBy] = useState<string>('category');
   const [display_mode, setDisplayMode] = useState<string>('grid'); // grid, list
-  const [original_products_list, setOriginalProductsList] = useState<Product[]>(products_list.products);
-  const [filtered_products_list, setFilteredProductsList] = useState<Product[]>(products_list.products);
+  const [original_products_list, setOriginalProductsList] = useState<IProduct[]>(products_list.products);
+  const [filtered_products_list, setFilteredProductsList] = useState<IProduct[]>(products_list.products);
 
-  const sort_list = (list: Product[], value: string) => {
-    let sortedObjs = [] as Product[];
+  const sort_list = (list: IProduct[], value: string) => {
+    let sortedObjs = [] as IProduct[];
     if (value === 'category') {
       sortedObjs = list.sort((a, b) => a.category.localeCompare(b.category));
     } else if (value === 'lowest_price') {
@@ -77,6 +77,9 @@ function MainPageDesktop() {
       sort_list(filtered_products_list, value)
     }
   }
+
+  console.log('')
+  console.log('checkout_products_list', checkout_products_list)
 
   return (
     <div className="main-page-desktop-container">
